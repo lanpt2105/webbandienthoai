@@ -6,8 +6,13 @@
 				</li>
 				<li><a href="index.php?xem=huongdan&id=1">Hướng dẫn</a></li>
 				<li><a href="index.php?xem=lienhe&id=1">Liên hệ</a></li>
-				<li><a href="index.php?xem=dangnhap&id=1">Đăng nhập</a></li>
-				<li><a href="index.php?xem=dangkymoi&id=1">Đăng ký</a></li>
+				<?php 
+					if(!isset($_SESSION['dangnhap'])){
+						
+						echo '<li><a href="index.php?xem=dangnhap&id=1">Đăng nhập</a></li>';
+						echo '<li><a href="index.php?xem=dangkymoi&id=1">Đăng ký</a></li>';
+					}
+				?>
 				
 			</ul>
 			

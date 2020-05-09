@@ -71,5 +71,4 @@ $dong_chitietsp=mysqli_fetch_array($query_chitietsp);
   </tbody>
 	
 </table>			
-					
 </div>

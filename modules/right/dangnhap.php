@@ -40,7 +40,18 @@
 		$count=mysqli_num_rows($query);
 		
 		if($count>0){
-			$tendangnhap=$_SESSION['dangnhap']=$TaiKhoan;
+			$row_s=mysqli_fetch_array($query);
+				$_SESSION['dangnhap']=array(
+					'id' => $row_s['MaND'],
+					'ten' => $row_s['Ten'],
+					'ho' => $row_s['Ho'],
+					'gt' => $row_s['GioiTinh'],
+					'sdt' => $row_s['SDT'],
+					'email' => $row_s['Email'],
+					'dc' => $row_s['DiaChi'],
+					'username' => $row_s['TaiKhoan'],
+				);
+			print_r($_SESSION['dangnhap']);
 			echo '<center><p style="text-align:center;width:500px;padding:30px;background:gray;color:#fff;font-size:40px;padding-top: 30px;">Bạn đã đăng nhập thành công.</p></center>';
 		
 			echo '<a href="index.php?quanly=listcart" style="font-size:20px;"><< Quay lại để thanh toán</a>';

@@ -1,4 +1,13 @@
-<?php  ?>
+<?php  
+	
+	if(session_id() === ''){
+		session_start();
+	}
+	// if(!isset($_SESSION['dangnhap']))
+	// 	$_SESSION['dangnhap'];
+	// if(!isset($_SESSION['cart']))
+	// 	$_SESSION['cart'];
+?>
 <!doctype html>
 <html>
 <head>
