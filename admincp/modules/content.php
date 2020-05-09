@@ -18,6 +18,10 @@
 	{
 		include('modules/Quanlytintuc/Main.php');
 	}
+	if($tam=='quanlydonhang')
+	{
+		include('modules/Quanlydonhang/Main.php');
+	}
 	if($tam=='trangchu')
 	{
 		include('modules/trangchu.php');
