@@ -1,5 +1,7 @@
 
-			<div class="header"> 
+
+
+<div class="header"> 
        		 <div style="display: none;" class="smallmenu" id="closemenu" onclick="smallmenu(0)">×</div>
        		 <div class="logo">
             	<a href="index.php">
@@ -25,24 +27,23 @@
 				<div class="tools-member">
                 <div class="member">
                     <a>
-                      <i class="fa fa-user"></i>
-                        Tài khoản
+                      <span><img src="img/smallBanners/login.png">Tài khoản</span>
+                        
                     </a>
                     
                 </div> 
 
                 <div class="cart">
-                    <a href="index.php?xem=listcart">
-                        <i class="fa fa-user"></i>
-                        <span>Giỏ hàng</span>
-                        <span class="cart-number"></span>
+                    <a href="index.php?xem=listcart" style="text-decoration: none; ">
+                        
+                       <img src="img/smallBanners/header_cart.png  "/>Giỏ hàng
+                        
                     </a>
                 </div> 
 
                
             </div>
         </div> 
-    </div>
-		
+</div>
 			
 		</div>

@@ -28,8 +28,8 @@ if (isset($_POST['submit'])) {
 	<div class="row">
 		<div class="danhsach">
 			<center><p style="font-size: 35px; padding-top: 20px;padding-bottom: 10px;align-content: center;font-weight: bold; font-family:'titan-one';;color: #1418E3;"> Sản phẩm trong giỏ hàng</p></center>
-			<table class="table table-bordered" width="900"; border=1;cell-padding:0;cell-spacing:0;>
-				<tr style="font-size: 23px;">
+			<table class="table table-bordered" width="900"; border=0;cell-padding:0;cell-spacing:0;>
+				<tr style="font-size: 23px;background: purple;color:wheat;">
 					<th>STT</th>
 					<th>Tên sản phẩm</th>
 
@@ -57,7 +57,7 @@ if (isset($_POST['submit'])) {
 							$totalprice += $subtotal;
 							$stt += 1;
 				?>
-							<tr style="font-size: 23px;">
+							<tr style="font-size: 23px;background: #DBB4B5;">
 								<td  align="center"><?php echo $stt ?></td>
 								<td align="center"><?php echo $row['TenSP'] ?></td>
 								<td align="center"><?php echo $row['DonGia'] ?>VND</td>

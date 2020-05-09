@@ -41,7 +41,7 @@
 		
 		if($count>0){
 			$row_s=mysqli_fetch_array($query);
-				$_SESSION['dangnhap']=array(
+			$_SESSION['dangnhap']=array(
 					'id' => $row_s['MaND'],
 					'ten' => $row_s['Ten'],
 					'ho' => $row_s['Ho'],
@@ -51,13 +51,17 @@
 					'dc' => $row_s['DiaChi'],
 					'username' => $row_s['TaiKhoan'],
 				);
-			print_r($_SESSION['dangnhap']);
-			echo '<center><p style="text-align:center;width:500px;padding:30px;background:gray;color:#fff;font-size:40px;padding-top: 30px;">Bạn đã đăng nhập thành công.</p></center>';
+				
+			 echo '<script language="javascript">';
+            echo 'alert("Đăng nhập thành công!!!")';
+            echo '</script>';
 		
 			echo '<a href="index.php?quanly=listcart" style="font-size:20px;"><< Quay lại để thanh toán</a>';
 		}else{
 			 
-				echo '<center><p style="text-align:center;width:500px;padding:30px;background:black;color:white;font-size:30px;">Tài khoản hoặc mật khẩu không đúng</p></center>';
+				 echo '<script language="javascript">';
+            echo 'alert("Tài khoản hoặc mật khẩu không đúng!!!")';
+            echo '</script>';
 		}
 	}
 ?>

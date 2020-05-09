@@ -26,10 +26,12 @@ if (isset($_POST['submit'])) {
 				$sql .= ','.$item;
 			}
 			$sql .= ')';
-			echo $sql.'<br/>';
+			
 			$query = mysqli_query($conn,$sql);
 		}
-		echo "<script type='text/javascript'>alert('message successfully sent');</script>";
+		 echo '<script language="javascript">';
+            echo 'alert("Đặt hàng thành công!")';
+            echo '</script>';
 		unset($_SESSION['cart']);
 	}
 }
@@ -41,25 +43,23 @@ if (isset($_POST['submit'])) {
 if (isset($_SESSION['cart'])) {
 	// print_r($_SESSION['cart']);
 	if (isset($_SESSION['dangnhap'])) {
-		echo '<div class="tieude"><span>Xin chào:<strong><em> ' . $_SESSION['dangnhap']['ho'] . ' ' . $_SESSION['dangnhap']['ten'] . '</em></strong>
-		
-		<a href="update_cart.php?thoat=1" style="text-decoration:none;color:red; margin-left:10px;">Đăng Xuất</a></span></div>
-		<h2>Danh sách sản phẩm của bạn: </h2>';
-		
+		echo '<div class="tieude"> <span style="font-size: 23px;">Xin chào:<strong><em> ' . $_SESSION['dangnhap']['ho'] . ' ' . $_SESSION['dangnhap']['ten'] . '</em></strong><a href="update_cart.php?thoat=1" style="text-decoration:underline;color:red; margin-left:10px;">Đăng Xuất</a></span></div>
+		<p style="font-size: 25px; font-weight:bold;">Danh sách sản phẩm của bạn: </p>
+		';
 	} else {
 		echo '<div class="tieude">Giỏ hàng của bạn</div>';
 	}
 
 	echo '<div class="box_giohang">';
-	echo '  <table width="60%" border="1" style="border-collapse:collapse; margin:5px; text-align:center;">';
+	echo '  <table width="60%" border="0" style="border-collapse:collapse; margin:5px; text-align:center;">';
 
-	echo '  <tr>';
-	echo '<th>STT</th>';
-	echo '<th>Tên SP</th>';
-	echo '<th>Hình ảnh</th>';
-	echo '<th>Giá sp</th>';
-	echo '<th>SL</th>';
-	echo '<th>Tổng tiền</th>';
+	echo '  <tr style="background:purple; height:50px; border-radius:5px;color:white;">';
+	echo '<td>STT</td>';
+	echo '<td>Tên sản phẩm</td>';
+	echo '<td>Hình ảnh</td>';
+	echo '<td>Giá sản phẩm</td>';
+	echo '<td>SL</td>';
+	echo '<td>Tổng tiền</td>';
 	echo '</tr>';
 	$thanhtien = 0;
 	$stt = 0;
@@ -74,13 +74,14 @@ if (isset($_SESSION['cart'])) {
 			$subTotal = $_SESSION['cart'][$row['MaSP']]['quantity'] * $row['DonGia'];
 			$thanhtien += $subTotal;
 			$stt += 1;
-			echo '<tr>';
+			echo '<tr  style="font-size: 22px;background: #DBB4B5; ">';
 			echo '<td>' . $stt . '</td>';
 			echo '<td>' . $row['TenSP'] . '</td>';
 			echo '<td><img src="' . $row['HinhAnh'] . '" alt="" width="100px" /></td>';
 			echo '<td>' . $row['DonGia'] . '</td>';
 			echo '<td>' . $_SESSION['cart'][$row['MaSP']]['quantity'] . '</td>';
 			echo '<td>' . number_format($_SESSION['cart'][$row['MaSP']]['quantity'] * $row['DonGia']) . '</td>';
+			echo'</tr>';
 		}
 	}
 	// foreach($_SESSION['cart'] as $cart_item){
@@ -106,8 +107,13 @@ if (isset($_SESSION['cart'])) {
 
 	// }
 	echo '<tr>
+		
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
 				
-				<td colspan="5" style="font-weight:bold">Thành tiền : </a>	
+				<td  style="font-weight:bold; font-size: 22px; padding-top:10px;">Thành tiền : </a>	
 				
 				</td>
 				
@@ -118,11 +124,11 @@ if (isset($_SESSION['cart'])) {
 			</tr>';
 } else {
 
-	echo 'Giỏ hàng của bạn trống';
+	echo '<p style="font-size: 25px; font-weight: bold;color:blue;">Giỏ hàng của bạn trống<p>';
 }
 
 
-echo '</table>';
+
 
 
 ?>
@@ -132,41 +138,43 @@ echo '</table>';
 
 
 	<table border="0">
+		<p style="font-size:30px;font-weight:bold;padding-bottom: 10px;padding-top: 30px;color: #E14D1C;">Thông tin đặt hàng</p>
 		<tr>
-			<td>Người nhận</td>
+			<td style="font-size:20px;font-weight:bold">Người nhận:</td>
 			<td><input type="text" name="receiver" /></td>
 		</tr>
 		<tr>
-			<td>Địa chỉ</td>
+			<td style="font-size:20px;font-weight:bold">Địa chỉ:</td>
 			<td><input type="text" name="address" /></td>
 		</tr>
 		<tr>
-			<td>Số điện thoại</td>
+			<td style="font-size:20px;font-weight:bold">Số điện thoại:</td>
 			<td><input type="text" name="phone" /></td>
 		</tr>
 		<tr>
-			<td>Phương thức thanh toán</td>
+			<td style="font-size:20px;font-weight:bold">Phương thức thanh toán:</td>
 			<td><input type="text" name="type_payment" /></td>
 		</tr>
 	</table>
 	<ul class="control">
-		<p><a href="../../index.php">Tiếp tục mua hàng</a></p>
+		
 		<?php
 		if (!isset($_SESSION['dangnhap'])) {
 			echo '
-		<p>Bạn chưa đăng nhập. <a href="../../index.php?xem=dangkymoi">Đăng ký mới</a> hoặc <a href="../../index.php?xem=dangnhap">Đăng nhập</a></p>';
+		<p style="font-size:25px;">Bạn chưa đăng nhập.Vui lòng đăng nhập để đặt hàng.<br> <a href="index.php?xem=dangkymoi">Đăng ký mới?</a> hoặc <a href="index.php?xem=dangnhap">Đăng nhập</a></p>';
 		}
 		?>
 		<?php
 		if (isset($_SESSION['dangnhap']) && isset($_SESSION['cart']) && $_SESSION['cart'] != null) {
 		?>
 
-			<button type="submit" name="submit" style="padding: 10px; background-color:yellow;">Đặt hàng</button>
+			<span style="padding-left: 120px;margin: 20px;"><button type="submit" name="submit" style="padding: 10px; background-color:greenyellow; border-radius:10px;align-content: center;">Đặt hàng</button></span>
 			<!-- <p style="float:right; background:#FF0;text-decoration:none;"><a href="thanhtoan.php" style="color:#000;margin:5px;">Thanh toán</a></p> -->
 
 		<?php
 		}
 		?>
 	</ul>
+	<p><a href="index.php"><img src="img/smallBanners/shop.png">"</a></p>
 </div>
 </form>

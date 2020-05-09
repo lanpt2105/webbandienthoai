@@ -1,3 +1,10 @@
+<?php
+if(isset($_GET['ac'])&&$_GET['ac']=='logout')
+{
+	unset($_SESSION['dangnhap']);
+	header('location:index.php');
+}
+?>
 <div class="menu">
 			<ul>
 				<li><a href="index.php">Trang chủ</a></li>
@@ -12,6 +19,10 @@
 						echo '<li><a href="index.php?xem=dangnhap&id=1">Đăng nhập</a></li>';
 						echo '<li><a href="index.php?xem=dangkymoi&id=1">Đăng ký</a></li>';
 					}
+				else
+				{
+					echo '<li ><a href="index.php?ac=logout" style="border-radius: 5px;">              Đăng xuất</a></li>';
+				}
 				?>
 				
 			</ul>
