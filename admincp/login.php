@@ -1,25 +1,11 @@
-<?php
-     include('modules/config.php');
-	session_start();
-    
-	if(isset($_POST['login']))
-	{
-		$username=$_POST['username'];
-		$password=$_POST['password'];
-		$sql="select * from admin where username='$username' and password='$password' limit 1";
-		$query=mysqli_query($conn,$sql);
-		$nums=mysqli_num_rows($query);
-		if($nums>0)
-		{
-			$_SESSION['dangnhap']=$username;
-			header('location:index.php');
-		}
-	     else{
-			 header('location:login.php');
-		 }
-		
-	}
-?>
+<i class="fa fa-user"></i><i class="fa fa-user"></i><!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Đăng nhập trang quản trị</title>
+	</head>
+	<body>
+
 <div style="width: 500px;
 			height: 180px;
 			background: pink;
@@ -55,3 +41,31 @@
 </center>
 </form>
 	</div>
+		</body>
+</html>
+	<?php
+     include('modules/config.php');
+	session_start();
+    
+	if(isset($_POST['login']))
+	{
+		$username=$_POST['username'];
+		$password=$_POST['password'];
+		$sql="select * from admin where username='$username' and password='$password' limit 1";
+		$query=mysqli_query($conn,$sql);
+		$nums=mysqli_num_rows($query);
+		if($nums>0)
+		{
+			$_SESSION['dangnhap']=$username;
+			header('location:index.php?quanly=trangchu&id=1');
+		}
+	     else{
+			 echo '<script language="javascript">';
+            echo 'alert("Tài khoản hoặc mật khẩu không đúng.Vui lòng nhập lại!!!")';
+            echo '</script>';
+			 
+			 
+		 }
+		
+	}
+?>

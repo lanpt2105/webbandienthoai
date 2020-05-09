@@ -16,7 +16,7 @@
 	{
 		width: 100%;
 		
-		height: 50px;
+		height: 90px;
 		background: #CF4B4D;
 		
 		
@@ -50,11 +50,14 @@
 	{
 			list-style-type: none;
 		background: #D4B0B0;
+		border-radius: 10px;
+		
 		   
 	}
 		a
 	{
-			text-decoration: none;
+			
+		text-decoration: none;
 		    width: 240px;
 			height: 50px;
 			line-height: 50px;
@@ -131,6 +134,7 @@
 			background: #A34D4F;
 			
 		}
+		
 		
 	</style>
 	

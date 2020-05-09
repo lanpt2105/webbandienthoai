@@ -2,7 +2,7 @@
 <?php
 $sql="select * from loaisanpham where MaLSP=$_GET[id]";
 $run=mysqli_query($conn,$sql);
-$dong=mysqli_fetch_array($run);
+while($dong=mysqli_fetch_array($run));
 
 ?>
 <form action="modules/Quanlyloaisp/Xuly.php" method="post" enctype="multipart/form-data">
