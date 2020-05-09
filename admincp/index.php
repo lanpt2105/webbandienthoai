@@ -10,7 +10,7 @@
 		widtht: auto;
 		height: auto;		
 		margin: auto;
-		
+		s
 	}
 	.heading
 	{

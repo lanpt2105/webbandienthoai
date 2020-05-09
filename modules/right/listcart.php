@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
 <form method="post" action="index.php?xem=listcart">
 	<div class="row">
 		<div class="danhsach">
-			<center><p style="font-size: 35px; padding-top: 20px;padding-bottom: 10px;align-content: center;font-weight: bold; font-family:'titan-one';;color: #1418E3;"> Sản phẩm trong giỏ hàng</p></center>
+			<p style="font-size: 35px; padding-top: 20px;padding-bottom: 10px;align-content: center;font-weight: bold; font-family:'titan-one';;color: #1418E3;padding-left: 200px;"> Sản phẩm trong giỏ hàng</p>
 			<table class="table table-bordered" width="900"; border=0;cell-padding:0;cell-spacing:0;>
 				<tr style="font-size: 23px;background: purple;color:wheat;">
 					<th>STT</th>
