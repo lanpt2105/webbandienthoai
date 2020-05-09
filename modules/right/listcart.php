@@ -24,19 +24,19 @@ if (isset($_POST['submit'])) {
 	}
 }
 ?>
-<form method="post" action="listcart.php">
+<form method="post" action="index.php?xem=listcart">
 	<div class="row">
 		<div class="danhsach">
-			<h3>Sản phẩm trong giỏ</h3>
-			<table class="table table-bordered">
-				<tr>
+			<center><p style="font-size: 35px; padding-top: 20px;padding-bottom: 10px;align-content: center;font-weight: bold; font-family:'titan-one';;color: #1418E3;"> Sản phẩm trong giỏ hàng</p></center>
+			<table class="table table-bordered" width="900"; border=1;cell-padding:0;cell-spacing:0;>
+				<tr style="font-size: 23px;">
 					<th>STT</th>
 					<th>Tên sản phẩm</th>
 
 					<th>Giá</th>
 					<th>Số lượng</th>
 					<th>Thành tiền</th>
-					<th>Action</th>
+					
 				</tr>
 				<?php
 				if ($_SESSION['cart']) {
@@ -57,28 +57,37 @@ if (isset($_POST['submit'])) {
 							$totalprice += $subtotal;
 							$stt += 1;
 				?>
-							<tr>
-								<td><?php echo $stt ?></td>
-								<td><?php echo $row['TenSP'] ?></td>
-								<td><?php echo $row['DonGia'] ?>$</td>
-								<td><input type="text" name="quantity[<?php echo $row['MaSP'] ?>]" size="5" value="<?php echo $_SESSION['cart'][$row['MaSP']]['quantity'] ?>" /></td>
-								<td><?php echo number_format($_SESSION['cart'][$row['MaSP']]['quantity'] * $row['DonGia']) ?> VND</td>
-								<td></td>
+							<tr style="font-size: 23px;">
+								<td  align="center"><?php echo $stt ?></td>
+								<td align="center"><?php echo $row['TenSP'] ?></td>
+								<td align="center"><?php echo $row['DonGia'] ?>VND</td>
+								<td align="center"><input type="text" name="quantity[<?php echo $row['MaSP'] ?>]" size="5" value="<?php echo $_SESSION['cart'][$row['MaSP']]['quantity'] ?>" /></td>
+								<td align="center"><?php echo number_format($_SESSION['cart'][$row['MaSP']]['quantity'] * $row['DonGia']) ?> VND</td>
+							
 							</tr>
+				
 				<?php
 
 						}
 					}
 				}
 				?>
-				<tr>
-					<td colspan="6">Tổng tiền: <?php echo number_format($totalprice) ?> VND</td>
+				<tr></tr>
+				
+				<tr style="padding-top: 10px;" >
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+					<td style="font-size: 23px;font-weight: bold;">Tổng tiền: <?php echo number_format($totalprice) ?> (VND)</td>
 				</tr>
+			
 			</table>
 			<br />
-			<a href="../../index.php">Quay lại</>
-				<button type="submit" name="submit">Update Cart</button>
-				<a href="dathang.php">Đặt hàng</>
+			<center ><button type="submit" name="submit" style="font-size:22px;">Update Cart</button></center>
+			<span style="font-size: 25px;"><a href="../../index.php" style="text-decoration: none;"><img src="img/smallBanners/32px.jpeg" width: "20px" height:"20px;"> Quay lại</a></span>
+				<span style="font-size: 25px;margin-right: 10px;"><a href="index.php?xem=dathang" style="text-decoration: none;"><img src="img/smallBanners/32px.png" width: "20px" height:"20px;">Đặt hàng</a></span>
 		</div>
 	</div>
 </form>

@@ -35,27 +35,31 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-<form method="post" action="dathang.php">
+<form method="post" action="index.php?xem=dathang">
 <?php
 // print_r($_SESSION['dangnhap']);
 if (isset($_SESSION['cart'])) {
 	// print_r($_SESSION['cart']);
 	if (isset($_SESSION['dangnhap'])) {
-		echo '<div class="tieude">Giỏ hàng của bạn | <span>Xin chào bạn:<strong><em> ' . $_SESSION['dangnhap']['ho'] . ' ' . $_SESSION['dangnhap']['ten'] . '</em></strong><a href="update_cart.php?thoat=1" style="text-decoration:underline;color:#fff; margin-left:10px;">Đăng Xuất</a></span></div>';
+		echo '<div class="tieude"><span>Xin chào:<strong><em> ' . $_SESSION['dangnhap']['ho'] . ' ' . $_SESSION['dangnhap']['ten'] . '</em></strong>
+		
+		<a href="update_cart.php?thoat=1" style="text-decoration:none;color:red; margin-left:10px;">Đăng Xuất</a></span></div>
+		<h2>Danh sách sản phẩm của bạn: </h2>';
+		
 	} else {
 		echo '<div class="tieude">Giỏ hàng của bạn</div>';
 	}
 
 	echo '<div class="box_giohang">';
-	echo '  <table width="100%" border="1" style="border-collapse:collapse; margin:5px; text-align:center;">';
+	echo '  <table width="60%" border="1" style="border-collapse:collapse; margin:5px; text-align:center;">';
 
 	echo '  <tr>';
-	echo '<td>STT</td>';
-	echo '<td>Tên SP</td>';
-	echo '<td>Hình ảnh</td>';
-	echo '<td>Giá sp</td>';
-	echo '<td>SL</td>';
-	echo '<td>Tổng tiền</td>';
+	echo '<th>STT</th>';
+	echo '<th>Tên SP</th>';
+	echo '<th>Hình ảnh</th>';
+	echo '<th>Giá sp</th>';
+	echo '<th>SL</th>';
+	echo '<th>Tổng tiền</th>';
 	echo '</tr>';
 	$thanhtien = 0;
 	$stt = 0;
@@ -73,7 +77,7 @@ if (isset($_SESSION['cart'])) {
 			echo '<tr>';
 			echo '<td>' . $stt . '</td>';
 			echo '<td>' . $row['TenSP'] . '</td>';
-			echo '<td><img src="../../' . $row['HinhAnh'] . '" alt="" width="100px" /></td>';
+			echo '<td><img src="' . $row['HinhAnh'] . '" alt="" width="100px" /></td>';
 			echo '<td>' . $row['DonGia'] . '</td>';
 			echo '<td>' . $_SESSION['cart'][$row['MaSP']]['quantity'] . '</td>';
 			echo '<td>' . number_format($_SESSION['cart'][$row['MaSP']]['quantity'] * $row['DonGia']) . '</td>';
@@ -103,7 +107,7 @@ if (isset($_SESSION['cart'])) {
 	// }
 	echo '<tr>
 				
-				<td colspan="5">Thành tiền : </a>	
+				<td colspan="5" style="font-weight:bold">Thành tiền : </a>	
 				
 				</td>
 				

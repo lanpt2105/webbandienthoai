@@ -49,6 +49,10 @@
 				{
 					include('modules/right/listcart.php');
 				}
+				elseif($tam=='dathang')
+				{
+					include('modules/right/dathang.php');
+				}
 				elseif($tam=='lienhe')
 				{
 					include('modules/right/lienhe.php');

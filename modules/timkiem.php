@@ -32,7 +32,7 @@
                 </div> 
 
                 <div class="cart">
-                    <a href="modules/right/listcart.php">
+                    <a href="index.php?xem=listcart">
                         <i class="fa fa-user"></i>
                         <span>Giỏ hàng</span>
                         <span class="cart-number"></span>
