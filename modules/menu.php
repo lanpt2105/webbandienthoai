@@ -1,9 +1,8 @@
 <?php
-if(isset($_GET['ac'])&&$_GET['ac']=='logout')
-{
-	unset($_SESSION['dangnhap']);
-	header('location:index.php');
-}
+	if( isset($_GET['ac']) && $_GET['ac']=='logout')
+	{
+		unset($_SESSION['dangnhap']);
+	}
 ?>
 <div class="menu">
 			<ul>

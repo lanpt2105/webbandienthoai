@@ -14,7 +14,7 @@ if(isset($_GET['add']))
 	if(isset($_SESSION['cart'][$id])){ 
               
 		$_SESSION['cart'][$id]['quantity']++; 
-		header("location:listcart.php");
+		header("location:../../index.php?xem=listcart");
 		  
 	}
 	else{ 
@@ -28,7 +28,7 @@ if(isset($_GET['add']))
 					"quantity" => 1, 
 					"price" => $row_s['DonGia'] 
 				); 
-				header("location:listcart.php");
+				header("location:../../index.php?xem=listcart");
 		}else{ 
 			  
 			$message="This product id it's invalid!"; 
