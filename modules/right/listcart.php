@@ -39,7 +39,7 @@ if (isset($_POST['submit'])) {
 					
 				</tr>
 				<?php
-				if ($_SESSION['cart']) {
+				if (isset($_SESSION['cart'])) {
 					$sql = 'SELECT * FROM sanpham WHERE MaSP IN (';
 					foreach ($_SESSION['cart'] as $id => $value) {
 						$sql .= $id . ",";
@@ -80,7 +80,7 @@ if (isset($_POST['submit'])) {
 					<td></td>
 					<td></td>
 					
-					<td style="font-size: 23px;font-weight: bold;">Tổng tiền: <?php echo number_format($totalprice) ?> (VND)</td>
+					<td style="font-size: 23px;font-weight: bold;">Tổng tiền: <?php echo isset($totalprice) ? number_format($totalprice) : '0'  ?> (VND)</td>
 				</tr>
 			
 			</table>
