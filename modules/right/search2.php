@@ -5,7 +5,7 @@ if(isset($_GET['khoanggia']))
 	$khoang=preg_split('[\s]', $khoanggia);
 	$from=0;
 	$to=0;
-	if($khoang=='Trên')
+	if($khoang[0]=='Trên')
 	{
 		$from=$khoang[1];
 	}
@@ -17,11 +17,12 @@ if(isset($_GET['khoanggia']))
 	}
 	$from*=1000000;
 	$to*=1000000;
-	$query.="and DonGia>=$from";
+	$query ="select * from sanpham where DonGia >= ".$from;
 	if($to!=0)
 	{
-		$query.=" and DonGia<=$to";
+		$query.=" and DonGia <= ".$to;
 	}
+	echo $query;
 	$result=$conn->query($query);
 	return $result;
 }
