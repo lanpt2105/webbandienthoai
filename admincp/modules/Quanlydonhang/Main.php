@@ -6,6 +6,10 @@
         else{
             $tam='';
         }
+    if($tam=='update')
+	{
+		include('modules/Quanlydonhang/Update.php');
+	}
 	if($tam=='list')
 	{
 		include('modules/Quanlydonhang/Listoder.php');
