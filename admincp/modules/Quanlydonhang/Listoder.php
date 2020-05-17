@@ -2,18 +2,20 @@
     $sql = 'SELECT * FROM hoadon ORDER BY NgayLap asc';
     $row_list = mysqli_query($conn,$sql);
 ?>
-<table width="90%" border="1" style="margin-left: 20px;margin-bottom:5px;">
+<div class="">
+<table width="80%" border="1" style="margin-left: 20px;margin-bottom:5px;float: left;" class="table-hover">
        <tbody>
             <tr>
                 <th>STT</th>
-                <th>Mã hoá đơn</th>
-                <th>Người nhận</th>
+                <th >Mã hoá đơn</th>
+                <th class="col-sm-1">Người nhận</th>
                 <th>Số điện thoại</th>
-                <th>Địa chỉ</th>
+                <th >Địa chỉ người nhận</th>
                 <th>Phương thức thanh toán</th>
                 <th>Tổng tiền</th>
-                <th>Ngày đặt</th>
+                <th >Ngày đặt</th>
                 <th>Trạng thái</th>
+                <th>Xóa</th>
             </tr>
             <?php
                 $i = 0;
@@ -21,14 +23,15 @@
             ?>
             <tr>
                 <td><?php echo $i; ?> </td>
-                <th><?php echo $dong['MaHD'] ?></th>
-                <th><?php echo $dong['NguoiNhan'] ?></th>
-                <th><?php echo $dong['SDT'] ?></th>
-                <th><?php echo $dong['DiaChi'] ?></th>
-                <th><?php echo $dong['PhuongThucTT'] ?></th>
-                <th><?php echo $dong['TongTien'] ?></th>
-                <th><?php echo $dong['NgayLap'] ?></th>
-                <th><?php echo $dong['TrangThai'] ?></th>
+                <td><?php echo $dong['MaHD'] ?></td>
+                <td><?php echo $dong['NguoiNhan'] ?></td>
+                <td><?php echo $dong['SDT'] ?></td>
+                <td><?php echo $dong['DiaChi'] ?></td>
+                <td><?php echo $dong['PhuongThucTT'] ?></td>
+                <td><?php echo $dong['TongTien'] ?></td>
+                <td><?php echo $dong['NgayLap'] ?></td>
+                <td><?php echo $dong['TrangThai'] ?></td>
+                <td style="font-size: 15px;"><a href="modules/Quanlydonhang/Xuly.php?id=<?php echo $dong['MaHD']?>">Xóa</a></td>
             </tr>
             <?php
                 $i++;
@@ -36,3 +39,4 @@
             ?>
         </tbody>
     </table>
+    </div>

@@ -1,10 +1,10 @@
 
 	<p style="margin-left: 600px;">
 <form action="modules/Quanlychitietsp/Xuly.php" method="post" enctype="multipart/form-data">
-<table width="500px" border="0" style="margin-left: 500px;margin-top:-380px; float: right;background: yellow;">
+<table width="500px" border="0" style="margin-left: 500px;margin-top:-1560px; float: right;background:#A7E98F;">
   <tbody>
     <tr>
-      <th colspan="2">Thêm chi tiết sản phẩm</th>
+      <th colspan="2" style="padding-left: 120px;font-weight: bold;font-size: 22px;">Sửa chi tiết sản phẩm</th>
       
     </tr>
 	  <?php
@@ -93,7 +93,7 @@
     </tr>
 	  <tr>
       <td colspan="2"><div align="center" >
-		  <button id="them" name="them" value="Thêm" >Thêm</button>
+		  <input type="submit" name="sua" id="sua" value="Sửa" style="border-radius: 6px;background:yellow;font-size: 20px;" />
 		  </div></td>
       
     </tr>

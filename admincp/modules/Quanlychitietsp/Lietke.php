@@ -16,7 +16,7 @@
 ?>
 
 <div class="lietke">
-<table width="50%" border="1">
+<table width="60%" border="1" class="table-hover">
  <tr><th>Mã SP</th>
 	  <th>Mã loại SP</th>
       <th>Tên sản phẩm</th>
@@ -74,7 +74,7 @@
   ?>
 </table>
 	
-<p style="width: 600px;float: left;padding-left: 800px; padding-top: 20px;font-weight: bold;"">
+<span style="float: left;padding-left: 800px; padding-top: 20px;font-weight: bold;"">
 	Trang :
     <?php
 	$sql1="select * from sanpham";
@@ -89,6 +89,6 @@
 	}
 	}
 	?>
-</p>
+</span>
 </div>
 

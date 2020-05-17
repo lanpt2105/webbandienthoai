@@ -22,6 +22,10 @@
 	{
 		include('modules/Quanlydonhang/Main.php');
 	}
+	if($tam=='quanlythanhvien')
+	{
+		include('modules/quanlythanhvien/Main.php');
+	}
 	if($tam=='trangchu')
 	{
 		include('modules/trangchu.php');

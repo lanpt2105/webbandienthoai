@@ -6,7 +6,7 @@
 ?>
 <div class="menu">
 			<ul>
-				<li><a href="index.php">Trang chủ</a></li>
+				<li ><a href="index.php">Trang chủ</a></li>
 				<li><a href="index.php?xem=sanphammoi&id=1">Sản phẩm mới</a></li>
 				<li><a href="index.php?xem=tintuc&id=1">Tin tức</a>
 				</li>

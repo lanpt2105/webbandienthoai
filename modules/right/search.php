@@ -8,8 +8,9 @@ if(isset($_POST['search']))
 	$query_search=mysqli_query($conn,$sql_search);
 }
 
+
 ?>
-			<p style="color:midnightblue; font-family:'abril-fatface' ; font-size: 35px; font-weight:bold;font-style: italic; text-align: center; padding-top: 5px;"> Sản phẩm tìm thấy</p>
+	<p style="color:midnightblue; font-family:'abril-fatface' ; font-size: 35px; font-weight:bold;font-style: italic; text-align: center; padding-top: 5px;"> Sản phẩm tìm thấy</p>
 			<div class="sanphamall">
 				<?php
 				if($count=mysqli_num_rows($query_search)==0)
@@ -40,4 +41,5 @@ if(isset($_POST['search']))
 					
 				</ul>
 			</div>
+		
 			

@@ -17,7 +17,7 @@
 <div class="tc">
 <div class="lk2">
 	<center><h1> Liệt kê tin tức</h1></center>
-<table width="100%" border="1" style="margin-left: 20px;margin-bottom:5px; background: #C87879;">
+<table width="100%" border="1" style="margin-left: 20px;margin-bottom:5px; background: #C87879;" class="table-hover">
   <tbody>
     <tr>
 	<th>Mã TT</th>

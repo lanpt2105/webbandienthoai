@@ -12,6 +12,7 @@
 <html>
 <head>
 <meta charset="utf-8">
+
 <title>Cửa hàng điện thoại Phùng Lan</title>
 <style>
 	*{ padding: 0px; margin: 0px;}
@@ -54,8 +55,50 @@
 	.footer
 	{
 		width: 100%;
-		height: 50px;
+		height: auto;
+		float: left;
+		background: #777575;
+		color: white;
 		
+		
+	}
+	.ttll
+	{
+		width: 500px;
+		float: left;
+		margin-left: 60px;
+		font-size: 20px;
+		padding-top:10px;
+		padding-bottom: 10px;
+	}
+	.ttht
+	{
+		width: 500px;
+		float: left;
+		padding-top:10px;
+		font-size: 20px;
+		list-style-type:circle;
+		
+	}
+	.htch
+	{
+		width: 500px;
+		float: left;
+		float: left;
+		padding-top:10px;
+		font-size: 20px;
+	}
+	.copy-right
+	{
+		text-align: center;
+		background:#4985B7;
+		color: white;
+		float: left;
+		width: 100%;
+		height: 60px;
+		line-height: 60px;
+		font-size: 18px;
+		padding-top: 20px;
 	}
 	.menu ul
 	{
@@ -357,12 +400,7 @@
 					margin-left: 5px;
 					padding-left: 5px; 
 				}
-		.copy-right
-	{
-		text-align: center;
-		background: #777575;
-		color: white;
-	}
+		
 	.dangky
 	{
 		width: 700px;
@@ -392,6 +430,12 @@
 		padding-top: 25px;
 		padding-left: 70px;
 	}
+	.tkgia
+	{
+		margin-left: 1800px;
+		font-size: 22px;
+	}
+	
 </style>
 </head>
 
@@ -407,7 +451,7 @@
 		?>
 	
 		
-		
+		<script src="https://uhchat.net/code.php?f=c8f064"></script>
 	</div>
 	
 </body>

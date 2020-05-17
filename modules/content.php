@@ -65,6 +65,10 @@
 				{
 					include('modules/right/search.php');
 				}
+				elseif($tam=='search2')
+				{
+					include('modules/right/search2.php');
+				}
 				else
 				{
 					include('modules/right/tatcasp.php');
