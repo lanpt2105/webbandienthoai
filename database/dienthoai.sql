@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 06, 2020 at 05:16 PM
+-- Generation Time: May 17, 2020 at 09:21 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -49,12 +49,40 @@ INSERT INTO `admin` (`Id`, `username`, `password`) VALUES
 --
 
 CREATE TABLE `chitiethoadon` (
+  `MaCTHD` int(11) NOT NULL,
   `MaHD` int(11) NOT NULL,
   `MaSP` int(11) NOT NULL,
   `SoLuong` int(11) NOT NULL,
-  `DonGia` float NOT NULL,
-  `MaCTHD` int(11) NOT NULL
+  `DonGia` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `chitiethoadon`
+--
+
+INSERT INTO `chitiethoadon` (`MaCTHD`, `MaHD`, `MaSP`, `SoLuong`, `DonGia`) VALUES
+(1, 1, 2, 1, 7690000),
+(2, 2, 3, 2, 4790000),
+(3, 2, 7, 1, 4690000),
+(7, 4, 11, 1, 17000000),
+(9, 10, 32, 1, 1890000),
+(10, 12, 25, 1, 590000),
+(11, 15, 24, 2, 550000),
+(12, 15, 26, 1, 1890000),
+(13, 15, 12, 1, 3490000),
+(14, 15, 31, 1, 1390000),
+(15, 15, 25, 1, 590000),
+(16, 15, 1, 1, 3490000),
+(17, 15, 29, 1, 2390000),
+(18, 15, 2, 1, 7690000),
+(19, 16, 4, 1, 31990000),
+(20, 16, 3, 1, 4790000),
+(21, 16, 10, 1, 12990000),
+(22, 16, 1, 4, 3490000),
+(23, 17, 34, 1, 24990000),
+(24, 17, 27, 1, 1350000),
+(25, 17, 2, 2, 7690000),
+(26, 17, 4, 1, 31990000);
 
 -- --------------------------------------------------------
 
@@ -88,6 +116,50 @@ CREATE TABLE `hoadon` (
   `TongTien` float NOT NULL,
   `TrangThai` varchar(70) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `hoadon`
+--
+
+INSERT INTO `hoadon` (`MaHD`, `MaND`, `NgayLap`, `NguoiNhan`, `SDT`, `DiaChi`, `PhuongThucTT`, `TongTien`, `TrangThai`) VALUES
+(1, 1, '2020-05-09 00:00:00', 'Phùng lLan', '0123123123', 'dc dc', 'dccdcdcd', 11180000, '3'),
+(2, 1, '2020-05-09 00:00:00', 'PL', '0123', 'PL', 'CK', 14270000, ''),
+(4, 1, '2020-05-09 00:00:00', 'PLAN', '1212112', 'Bắc Từ Liêm', 'Cod', 17000000, ''),
+(5, 1, '2020-05-09 00:00:00', 'PLAN', '1212112', 'Bắc Từ Liêm', 'Cod', 17000000, ''),
+(6, 1, '2020-05-09 00:00:00', 'PLAN', '1212112', 'Bắc Từ Liêm', 'Cod', 17000000, ''),
+(7, 1, '2020-05-09 00:00:00', 'PLAN', '1212112', 'Bắc Từ Liêm', 'Cod', 17000000, ''),
+(9, 1, '2020-05-09 00:00:00', 'a', 'a', 'a', 'a', 1390000, ''),
+(10, 1, '2020-05-09 00:00:00', 'B', '1111', 'b', 'b', 1890000, ''),
+(11, 1, '2020-05-09 00:00:00', 'B', '1111', 'b', 'b', 1890000, '1'),
+(12, 1, '2020-05-09 00:00:00', '1', '1', '1', '1', 590000, '2'),
+(13, 1, '2020-05-09 00:00:00', '1', '1', '1', '1', 590000, '1'),
+(14, 1, '2020-05-09 00:00:00', '1', '1', '1', '1', 590000, ''),
+(15, 1, '2020-05-09 00:00:00', '123', '123', '123', '123', 22030000, '2'),
+(16, 1, '2020-05-09 00:00:00', '213', '123', '123', '123', 63730000, '1'),
+(17, 1, '2020-05-10 00:00:00', 'Phùng lLan', '0348639696', 'Bắc Từ Liêm', 'cod', 73710000, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `khoanggia`
+--
+
+CREATE TABLE `khoanggia` (
+  `id` int(11) NOT NULL,
+  `khoanggia` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `status` int(1) NOT NULL DEFAULT 1
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `khoanggia`
+--
+
+INSERT INTO `khoanggia` (`id`, `khoanggia`, `status`) VALUES
+(1, '0-2 triệu', 1),
+(2, '2-5 triệu', 1),
+(3, '5-10 triệu', 1),
+(4, '10-20 triệu', 1),
+(5, 'Trên 20 triệu ', 1);
 
 -- --------------------------------------------------------
 
@@ -144,8 +216,7 @@ INSERT INTO `loaisanpham` (`MaLSP`, `TenLSP`, `HinhAnh`, `Mota`) VALUES
 (10, 'Nokia', 'Nokia.jpg', 'Các sản phẩm của Nokia'),
 (11, 'Motorola', 'Motorola.jpg', 'Các sản phẩm của Motorola'),
 (12, 'Mobiistar', 'Mobiistar.jpg', 'Các sản phẩm của Mobiistar'),
-(13, 'Xiaomi', 'Xiaomi.jpg', 'Các sản phẩm của Xiaomi'),
-(23, 'Huawei', 'Huawei.jpg', 'Các sản phẩm của Huawei');
+(13, 'Xiaomi', 'Xiaomi.jpg', 'Các sản phẩm của Xiaomi');
 
 -- --------------------------------------------------------
 
@@ -298,7 +369,6 @@ INSERT INTO `tintuc` (`MaTT`, `MaLTT`, `TenTT`, `MoTa`, `NoiDung`, `HinhAnh`, `T
 
 CREATE TABLE `user` (
   `MaND` int(11) NOT NULL,
-  `Ho` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `Ten` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `GioiTinh` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `SDT` varchar(11) COLLATE utf8_unicode_ci NOT NULL,
@@ -306,21 +376,20 @@ CREATE TABLE `user` (
   `DiaChi` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
   `TaiKhoan` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `MatKhau` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `MaQuyen` int(11) NOT NULL,
-  `TrangThai` int(11) NOT NULL
+  `MaQuyen` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`MaND`, `Ho`, `Ten`, `GioiTinh`, `SDT`, `Email`, `DiaChi`, `TaiKhoan`, `MatKhau`, `MaQuyen`, `TrangThai`) VALUES
-(1, 'Phùng', 'Lan', 'Nữ', '0123456', 'lancadillac@gmail.com', 'Nam Định', 'Lanpt', 'Lanpt', 1, 1),
-(6, 'Nguyen', 'A', 'Nữ', '012345678', 'a@gmail.com', 'Hà Nội', 'Abc', 'Abc', 1, 1),
-(7, 'Duong', 'Hao', 'Nu', '0362000606', 'hao@gmail.com', 'Nguyên Xá, Bắc Từ Liêm, Hà Nội', 'HaoDuong', 'HaoDuong', 2, 1),
-(8, 'Duong', 'Hao', 'Nu', '0362000606', 'hao@gmail.com', 'Nguyên Xá, Bắc Từ Liêm, Hà Nội', 'HaoDuong', 'HaoDuong', 2, 1),
-(9, 'Duong', 'Hao', 'Nu', '0362000606', 'hao@gmail.com', 'Nguyên Xá, Bắc Từ Liêm, Hà Nội', 'HaoDuong', 'HaoDuong', 2, 1),
-(10, 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 1, 1);
+INSERT INTO `user` (`MaND`, `Ten`, `GioiTinh`, `SDT`, `Email`, `DiaChi`, `TaiKhoan`, `MatKhau`, `MaQuyen`) VALUES
+(1, 'Lan', 'Nữ', '0123456', 'lancadillac@gmail.com', 'Nam Định', 'Lanpt', 'Lanpt', 1),
+(6, 'A', 'Nữ', '012345678', 'a@gmail.com', 'Hà Nội', 'Abc', 'Abc', 1),
+(7, 'Hao', 'Nu', '0362000606', 'hao@gmail.com', 'Nguyên Xá, Bắc Từ Liêm, Hà Nội', 'HaoDuong', 'HaoDuong', 2),
+(10, 'c', 'c', 'c', 'c', 'c', 'c', 'c', 1),
+(27, 'b', 'b', '12345678', 'b@gmail.com', 'b', 'b', 'b', 1),
+(28, 'Phạm Hằng', 'Nữ', '0123456', 'hangpham@gmail.com', 'Nam Định', 'Hangpt', 'Hangpt', 1);
 
 --
 -- Indexes for dumped tables
@@ -353,6 +422,12 @@ ALTER TABLE `danhgia`
 ALTER TABLE `hoadon`
   ADD PRIMARY KEY (`MaHD`),
   ADD KEY `MaND` (`MaND`);
+
+--
+-- Indexes for table `khoanggia`
+--
+ALTER TABLE `khoanggia`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `khuyenmai`
@@ -414,7 +489,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `chitiethoadon`
 --
 ALTER TABLE `chitiethoadon`
-  MODIFY `MaCTHD` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `MaCTHD` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `danhgia`
@@ -426,7 +501,13 @@ ALTER TABLE `danhgia`
 -- AUTO_INCREMENT for table `hoadon`
 --
 ALTER TABLE `hoadon`
-  MODIFY `MaHD` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `MaHD` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `khoanggia`
+--
+ALTER TABLE `khoanggia`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `khuyenmai`
@@ -438,7 +519,7 @@ ALTER TABLE `khuyenmai`
 -- AUTO_INCREMENT for table `loaisanpham`
 --
 ALTER TABLE `loaisanpham`
-  MODIFY `MaLSP` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `MaLSP` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `loaitintuc`
@@ -468,7 +549,7 @@ ALTER TABLE `tintuc`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `MaND` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `MaND` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- Constraints for dumped tables

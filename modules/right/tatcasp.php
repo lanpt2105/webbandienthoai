@@ -15,7 +15,7 @@ else
 {
 	$trang1=($get_trang*10)-10;
 }
-$sql_all="select * from sanpham limit $trang1,10";
+$sql_all="select * from sanpham where SoLuong > 0 limit $trang1,10";
 $query_all=mysqli_query($conn,$sql_all);
 ?>
 			<p style="color:midnightblue; font-family:'abril-fatface' ; font-size: 27px; font-weight:bold;font-style: italic; text-align: center; padding-top: 5px;">Tất cả sản phẩm</p>

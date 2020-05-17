@@ -7,8 +7,8 @@ if (isset($_POST['change'])) {
         $sql = 'UPDATE hoadon SET TrangThai = ' . $_POST["trangthai"] . ' WHERE MaHD = ' . $_POST["id"];
         $result = mysqli_query($conn, $sql);
         if ($result == true) {
-            echo 'Đã cập nhật trạng thái thành công, trang sẽ tải lại sau 3s';
-            header("Refresh:3");
+            
+            header("Refresh:1");
         }
     } catch (Exception $e) {
     }
@@ -23,8 +23,8 @@ if (isset($_POST['delete'])) {
             $sql = 'DELETE FROM hoadon WHERE MaHD = ' . $_POST["id"];
             $result1 = mysqli_query($conn, $sql);
             if ($result1 == true) {
-                echo 'Đã xoá đơn hàng thành công, trang sẽ tải lại sau 3s';
-                header("Refresh:3");
+                
+                header("Refresh:1");
             }
         }
     } catch (Exception $e) {
