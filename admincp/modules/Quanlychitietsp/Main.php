@@ -11,6 +11,7 @@
 	if($tam=='them')
 	{
 		include('modules/Quanlychitietsp/Them.php');
+		
 	}
 	if($tam=='sua')
 	{
@@ -19,6 +20,7 @@
 	?>
 </div><br>
 <div class="right">
+
 	<?php
 	    include('modules/Quanlychitietsp/Lietke.php');
 	?>

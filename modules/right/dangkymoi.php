@@ -1,7 +1,7 @@
 
 <?php
 	if(isset($_POST['gui'])){
-		$ho=$_POST['ho'];
+		
 		$ten=$_POST['ten'];
 		$gioitinh=$_POST['gioitinh'];
 		$sdt=$_POST['sdt'];
@@ -10,8 +10,8 @@
 		$taikhoan=$_POST['taikhoan'];
 		$pass=$_POST['pass'];
 		$maquyen=$_POST['maquyen'];
-		$trangthai=$_POST['trangthai'];
-		$sql_dangky="insert into user (Ho,Ten,GioiTinh,SDT,Email,DiaChi,TaiKhoan,MatKhau,MaQuyen,TrangThai) value('$ho','$ten','$gioitinh','$sdt','$email','$diachi','$taikhoan','$pass','$maquyen','$trangthai')";
+	
+		$sql_dangky="insert into user (Ten,GioiTinh,SDT,Email,DiaChi,TaiKhoan,MatKhau,MaQuyen) value('$ten','$gioitinh','$sdt','$email','$diachi','$taikhoan','$pass','$maquyen','$)";
 		$query_dangky=mysqli_query($conn,$sql_dangky);
 		    
 	if($query_dangky){
@@ -28,12 +28,9 @@
   <p style="font-size:18px; color:red;margin:5px;">(Các mục dấu * là bắt buộc tối thiểu. Vui lòng điền đầy đủ và chính xác)</p>
   <form action="" method="post" enctype="multipart/form-data" name="login">
 	<table width="100%" height="600" border="0" style="border-collapse:collapse;">
-  <tr>
-    <td width="30%" style="font-size: 20px;font-weight: bold;padding-left: 10px;">Họ<strong style="color:red;"> (*):</strong></td>
-    <td width="70%"><input type="text" name="ho" id="ho" size="50" style="height:30px;"></td>
-  </tr>
+  
 		<tr>
-    <td width="40%" style="font-size: 20px;font-weight: bold;padding-left: 10px">Tên<strong style="color:red;"> (*):</strong></td>
+    <td width="40%" style="font-size: 20px;font-weight: bold;padding-left: 10px">Họ & Tên<strong style="color:red;"> (*):</strong></td>
     <td width="60%"><input type="text" name="ten" id="ten" size="50" style="height:30px;"></td>
   </tr>
 	<tr>
@@ -60,13 +57,13 @@
     <td style="font-size: 20px;font-weight: bold;padding-left: 10px">Mật khẩu  <strong style="color:red;"> (*):</strong></td>
     <td width="80%"><input type="password" name="pass" id="pass" size="50" style="height:30px;"></td>
   </tr>
+  <tr>
  
 		<td style="font-size: 20px;font-weight: bold;padding-left: 10px">Mã quyền:<strong style="color:red;"></strong></td>
      <td width="80%"><input type="text" name="maquyen" id="maquyen" size="50" style="height:30px;"></td>
   </tr>
-	  <td style="font-size: 20px;font-weight: bold;padding-left: 10px">Trạng thái <strong style="color:red;"> (*):</strong></td>
-     <td width="80%" ><input type="text" name="trangthai" id="trangthai" size="50" style="height:30px;"></td>
-  </tr>
+	  
+  
   
   <tr>
     <td colspan="2">
@@ -80,14 +77,14 @@
 </div>
 <script type="text/javascript">
 		function valid() {
-			var ho = document.login.ho.value;
+			
 			var ten = document.login.ten.value;
 			var sdt = document.login.sdt.value;
 			var diachi= document.login.diachi.value;
 			var taikhoan= document.login.taikhoan.value;
 			var email = document.login.email.value;
 			var pass= document.login.pass.value;
-			var trangthai= document.login.trangthai.value;
+			
 			var em = email.indexOf("@");
 			var emc = email.slice(em,email.length);
 			var emd = emc.indexOf(".");

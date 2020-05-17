@@ -1,16 +1,19 @@
-<i class="fa fa-user"></i><i class="fa fa-user"></i><!doctype html>
+<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <title>Trang quản trị</title>
 	<style>
 	*{ padding: 0px; margin: 0px;}		
 	.wrapper
 	{
-		widtht: auto;
+		width: auto;
 		height: auto;		
 		margin: auto;
-		s
+		
 	}
 	.heading
 	{
@@ -72,14 +75,7 @@
 			background:#4A5CEC;
 			
 		}
-			.copy-right
-	{
-		text-align: center;
-		background: #777575;
-		color: white;
-		height: 50px;
 		
-	}
 		.left
 		{
 			width: auto;
@@ -102,7 +98,8 @@
 		}
 		.them
 		{
-			style="font-size: 22px;font-weight: bold;"
+			style="font-size: 22px;font-weight: bold;"\
+			padding-top: 10px;
 		}
 		.lietke
 		{
@@ -134,7 +131,18 @@
 			background: #A34D4F;
 			
 		}
+		.copyright
+	{
+		text-align: center;
+		background:#4985B7;
+		color: white;
+		float: left;
+		width: 100%;
+		height: 60px;
 		
+		font-size: 18px;
+		
+	}
 		
 	</style>
 	

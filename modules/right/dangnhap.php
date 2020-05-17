@@ -1,5 +1,6 @@
 
-<p style="text-align: center; font-size: 40px; font-family:arizonia; font-weight: bold;">Xin chào!!!</p>
+<head>
+	<p style="text-align: center; font-size: 40px; font-family:arizonia; font-weight: bold;">Xin chào!!!</p>
 	
 
 <center><div class="dangky">
@@ -65,4 +66,5 @@
 		}
 	}
 ?>
+
 

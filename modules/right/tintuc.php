@@ -41,6 +41,7 @@ $query_tt=mysqli_query($conn,$sql_tt);
 					
 				</ul>
 			</div>
+			<div class="pagination">
 <p style="width: 600px;float: left;padding-left: 350px; padding-top: 20px;font-weight: bold;">
 	Trang: 
 <?php
@@ -58,6 +59,6 @@ for($b=1;$b<=$a;$b++){
 ?><br>
 	
 	Trang hiện tại: <span style="color:crimson; "><?php echo $get_trang ?></span>
-</p>
+</p></div>
 	
 			

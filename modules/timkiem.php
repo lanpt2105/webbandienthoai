@@ -21,9 +21,27 @@
                     </div>
                 </form> <!-- End Form search -->
                 <div class="tags">
-                    <strong style="padding-left: 30px;">Từ khóa: </strong>
+                    <strong style="padding-left: 30px;">Tìm kiếm theo giá:  </strong>
+                     <?php
+                function price()
+                {
+                    global $conn;
+                    $sql_kg="select * from khoanggia where status='1'";
+
+                    return $conn->query($sql_kg);
+                    
+                }
+                $result=price();
+                ?>
+                
+                    <?php foreach($result as $rs):?>
+                         <span style="background: pink;width: 150px;height: 70px; line-height: 70px;border-radius: 10px;">
+                            <a href="?xem=search2&khoanggia=<?=$rs['khoanggia']?>" style="text-decoration: none;color: blue;font-weight: bold;"><?=$rs['khoanggia']?></a></span>
+                        
+                     <?php endforeach;?>
                 </div>
             </div>
+            
 				<div class="tools-member">
                 <div class="member">
                     <a>

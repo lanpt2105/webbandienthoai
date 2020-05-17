@@ -86,7 +86,7 @@ if (isset($_POST['submit'])) {
 			</table>
 			<br />
 			<center ><button type="submit" name="submit" style="font-size:22px;">Update Cart</button></center>
-			<span style="font-size: 25px;"><a href="../../index.php" style="text-decoration: none;"><img src="img/smallBanners/32px.jpeg" width: "20px" height:"20px;"> Quay lại</a></span>
+			<span style="font-size: 25px;"><a href="index.php" style="text-decoration: none;"><img src="img/smallBanners/32px.jpeg" width: "20px" height:"20px;"> Quay lại</a></span>
 				<span style="font-size: 25px;margin-right: 10px;"><a href="index.php?xem=dathang" style="text-decoration: none;"><img src="img/smallBanners/32px.png" width: "20px" height:"20px;">Đặt hàng</a></span>
 		</div>
 	</div>

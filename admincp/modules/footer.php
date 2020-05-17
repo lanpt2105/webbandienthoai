@@ -1,7 +1,7 @@
 <div class="footer">
-	<div class="copy-right">
+	<div class="copyright">
         <p>
             
-            <span style="color:darkblue; font-weight: bold;;">Copyright 2020 <br> Designed by Phùng Lan</span>
+            <i><span style="color:darkblue; font-weight: bold;;">Copyright 2020 <br> Designed by Phùng Lan</span></i>
         </p>
     </div>';</div>
