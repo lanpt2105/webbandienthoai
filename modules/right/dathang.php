@@ -21,13 +21,14 @@ if (isset($_POST['submit'])) {
 		$last_id = mysqli_insert_id($conn);
 		foreach ($_SESSION['cart'] as $id => $value) {
 			$sql = 'INSERT INTO chitiethoadon(MaHD, MaSP, SoLuong, DonGia) VALUES ('.$last_id.','.$id;
-			
 			foreach ($value as $idSP => $item){
 				$sql .= ','.$item;
 			}
 			$sql .= ')';
+			$sqlUpdateSL = 'UPDATE sanpham set SoLuong = (( SELECT SoLuong from sanpham where MaSP = '.$id.' ) - '.$value['quantity'].') WHERE MaSP = '.$id;
 			
 			$query = mysqli_query($conn,$sql);
+			$queryUpdate = mysqli_query($conn, $sqlUpdateSL);
 		}
 		 echo '<script language="javascript">';
             echo 'alert("Đặt hàng thành công!")';
