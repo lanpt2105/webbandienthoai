@@ -15,11 +15,29 @@ if (session_id() === '') {
 // 	print_r($_SESSION['dangnhap']);
 // }
 if (isset($_POST['submit'])) {
+	$check = [];
+	foreach ($_POST['quantity'] as $key => $val){
+		$sql = 'SELECT * FROM sanpham where MaSP = '.$key;
+		$res = mysqli_query($conn,$sql);
+		if($res != null){
+			while($data = mysqli_fetch_array($res)){
+				if($key == $data['MaSP'] && $val > $data['SoLuong']){
+					$check[$key] = false;
+					echo 'Sản phẩm '.$data['TenSP'].' trong kho hàng không đủ.<br/>';
+				}
+				else{
+					$check[$key] = true;
+				}
+			}
+		}
+	}
 	foreach ($_POST['quantity'] as $key => $val) {
-		if ($val <= 0) {
-			unset($_SESSION['cart'][$key]);
-		} else {
-			$_SESSION['cart'][$key]['quantity'] = $val;
+		if($check[$key] == true){
+			if ($val <= 0) {
+				unset($_SESSION['cart'][$key]);
+			} else {
+				$_SESSION['cart'][$key]['quantity'] = $val;
+			}
 		}
 	}
 }
