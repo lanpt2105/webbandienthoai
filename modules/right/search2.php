@@ -22,7 +22,7 @@ if(isset($_GET['khoanggia']))
 	{
 		$query.=" and DonGia <= ".$to;
 	}
-	echo $query;
+	
 	$result= mysqli_query($conn,$query);
 }
 

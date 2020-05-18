@@ -18,7 +18,7 @@
             </div>
         </form> <!-- End Form search -->
         <div class="tags">
-            <strong style="padding-left: 30px;">Tìm kiếm theo giá: </strong>
+            <i><strong style="padding-left: 30px;font-size:20px;">Tìm kiếm theo giá: </strong></i>
             <?php
             function price()
             {
@@ -41,18 +41,18 @@
     <div class="tools-member">
         <div class="member">
             <a>
-                <span><img src="img/smallBanners/login.png">Tài khoản</span>
+                <span></span>
 
             </a>
 
         </div>
 
         <div class="cart">
-            <a href="index.php?xem=listcart" style="text-decoration: none; ">
+            <i><a href="index.php?xem=listcart" style="text-decoration: none; font-size: 22px;">
 
                 <img src="img/smallBanners/header_cart.png  " />Giỏ hàng
 
-            </a>
+            </a></i>
         </div>
 
 

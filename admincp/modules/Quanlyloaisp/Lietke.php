@@ -4,7 +4,7 @@
 ?>
 <table width="90%" border="1" style="margin-left: 20px;margin-bottom:5px;" class="table-hover">
   <tbody>
-    <tr>
+    <tr style="background: purple; font-weight: bold;color: white;" align="center">
       <th>STT</th>
       <th>Mã loại SP</th>
       <th class="col-sm-1">Tên loại SP</th>
@@ -18,7 +18,7 @@
 	  while ( $dong=mysqli_fetch_array($run))
 	  {
 	  ?>
-    <tr>
+    <tr style="background: pink;" align="center">
       <td align="center"><?php echo $i; ?> </td>
       <td align="center"><?php echo $dong['MaLSP'] ?></td>
       <td><?php echo $dong['TenLSP'] ?></td>

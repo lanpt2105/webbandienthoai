@@ -91,12 +91,12 @@
 	.copy-right
 	{
 		text-align: center;
-		background:#4985B7;
+		background:#7A8FA0;
 		color: white;
 		float: left;
 		width: 100%;
-		height: 60px;
-		line-height: 60px;
+		height: 50px;
+		
 		font-size: 18px;
 		padding-top: 20px;
 	}

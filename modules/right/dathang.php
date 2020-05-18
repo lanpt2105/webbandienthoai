@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
 if (isset($_SESSION['cart'])) {
 	// print_r($_SESSION['cart']);
 	if (isset($_SESSION['dangnhap'])) {
-		echo '<div class="tieude"> <span style="font-size: 23px;">Xin chào:<strong><em> ' . $_SESSION['dangnhap']['ho'] . ' ' . $_SESSION['dangnhap']['ten'] . '</em></strong></span></div>
+		echo '<div class="tieude"> <span style="font-size: 23px;">Xin chào:<strong><em>  ' . $_SESSION['dangnhap']['ten'] . '</em></strong></span></div>
 		<p style="font-size: 25px; font-weight:bold;">Danh sách sản phẩm của bạn: </p>
 		';
 	} else {
@@ -118,7 +118,7 @@ if (isset($_SESSION['cart'])) {
 				</td>
 				
 				
-				<td><input type="hidden" name="tongtien" value="' .(string)$thanhtien.'" />'. number_format($thanhtien) . 'VNĐ' . '</td>
+				<td style="font-size:23px; font-weight:bold;"><i><input type="hidden" name="tongtien" value="' .(string)$thanhtien.'" />'. number_format($thanhtien) . 'VNĐ' . '</i></td>
 				
 			
 			</tr>';

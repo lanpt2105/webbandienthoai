@@ -34,7 +34,7 @@
 	<div class="copy-right">
         
             
-           <i>Copyright 2020 <br> Designed by Phùng Lan</i> 
+           <i>Copyright 2020 <br> Designed by Phùng Lan-KHMT1</i> 
         
 		</div>
 	

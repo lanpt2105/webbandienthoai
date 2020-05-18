@@ -27,7 +27,7 @@
 	.menu
 	{
 		width: 250px;;
-		height: 1590px;
+		height: auto;
 	    background: #D4B0B0;
 		float: left;
 		
@@ -98,7 +98,7 @@
 		}
 		.them
 		{
-			style="font-size: 22px;font-weight: bold;"\
+			font-size: 22px;font-weight: bold;
 			padding-top: 10px;
 		}
 		.lietke
@@ -119,7 +119,7 @@
 		.tc
 		{
 			width: 1427px;
-			height: 1590px;
+			height:960px;
 			background-image: url("../img/banners/unnamed.jpg");
 			
 			

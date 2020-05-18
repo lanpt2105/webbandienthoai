@@ -1,6 +1,6 @@
 <?php
 include('../config.php');
-$id=$_GET['id'];
+$id=$_GET['MaSP'];
 	$maloaisp=$_POST['maloaisp'];
 	$tensp=$_POST['tensp'];
 	$gia=$_POST['gia'];
@@ -22,19 +22,19 @@ $id=$_GET['id'];
 	
 if(isset($_POST['them']))
 {
-	$sql= "insert into sanpham(MaLSP,TenSP,DonGia,SoLuong,HinhAnh,MaKM,ManHinh,HDH,CamSau,CamTruoc,CPU,Ram,Rom,SDCard,Pin,SoSao,SoDanhGia,TrangThai) value('$maloaisp','$tensp',$gia','$soluong','$hinhanh','$makhuyenmai','$manhinh','$hdh','$camsau','$camtruoc','$cpu','$ram','$rom','$sdcard','$pin','$sosao','$sodanhgia','$trangthai')";
+	$sql= "INSERT into sanpham(MaLSP,TenSP,DonGia,SoLuong,HinhAnh,MaKM,ManHinh,HDH,CamSau,CamTruoc,CPU,Ram,Rom,SDCard,Pin,SoSao,SoDanhGia,TrangThai) value('$maloaisp','$tensp',$gia','$soluong','$hinhanh','$makhuyenmai','$manhinh','$hdh','$camsau','$camtruoc','$cpu','$ram','$rom','$sdcard','$pin','$sosao','$sodanhgia','$trangthai')";
 	mysqli_query($conn,$sql);
 	header('location:../../index.php?quanly=quanlychitietsanpham&ac=them');
 }
 elseif(isset($_POST['sua']))
 {
-	$sql="Update sanpham set MaLSP='$maloaisp',TenSP='$tensp',DonGia='$gia',SoLuong='$soluong',HinhAnh='$hinhanh',MaKM='$makhuyenmai',ManHinh='$manhinh',HDH='$hdh',CamSau='$camsau',CamTruoc='$camtruoc',CPU='$cpu',Ram='$ram',Rom='$rom',SDCard='$sdcard',Pin='$pin',SoSao='$sosao',SoDanhGia='$sodanhgia',TrangThai='$trangthai' where MaSP='$id'";
+	$sql="UPDATE sanpham set MaLSP='$maloaisp',TenSP='$tensp',DonGia='$gia',SoLuong='$soluong',HinhAnh='$hinhanh',MaKM='$makhuyenmai',ManHinh='$manhinh',HDH='$hdh',CamSau='$camsau',CamTruoc='$camtruoc',CPU='$cpu',Ram='$ram',Rom='$rom',SDCard='$sdcard',Pin='$pin',SoSao='$sosao',SoDanhGia='$sodanhgia',TrangThai='$trangthai' where MaSP='$id'";
 	mysqli_query($conn,$sql);
 	header('location:../../index.php?quanly=quanlychitietsanpham&ac=them&id='.$id);
 }
 else
 {
-   $sql="delete from sanpham where MaSP='$id'";
+   $sql="DELETE from sanpham where MaSP='$id'";
 	mysqli_query($conn,$sql);
 	header('location:../../index.php?quanly=quanlychitietsanpham&ac=them');
 }

@@ -8,7 +8,7 @@ if (isset($_POST['change'])) {
         $result = mysqli_query($conn, $sql);
         if ($result == true) {
             
-            header("Refresh:1");
+            header("Refresh:0");
         }
     } catch (Exception $e) {
     }
@@ -24,7 +24,7 @@ if (isset($_POST['delete'])) {
             $result1 = mysqli_query($conn, $sql);
             if ($result1 == true) {
                 
-                header("Refresh:1");
+                header("Refresh:0");
             }
         }
     } catch (Exception $e) {
@@ -32,16 +32,18 @@ if (isset($_POST['delete'])) {
 }
 
 ?>
-<div class="">
-    <table width="80%" border="1" style="margin-left: 20px;margin-bottom:5px;float: left;" class="table-hover">
+<div>
+
+    <table width="100%" border="1" style="margin-left: 100px;margin-bottom:5px;float: left;margin-top: 70px;" class="table-hover">
+        <caption style="font-size: 30px;font-weight: bold;color: green;padding-left: 300px; padding-bottom: 30px;">Quản lý thông tin đơn hàng</caption>
         <thead>
-            <tr>
+            <tr style="background: purple;font-size: 18px; font-weight: bold;color: white;" align="center">
                 <th>STT</th>
                 <th>Mã hoá đơn</th>
                 <th>Người nhận</th>
                 <th>Số điện thoại</th>
-                <th>Địa chỉ</th>
-                <th>Phương thức thanh toán</th>
+                <th>Địa chỉ nhận hàng</th>
+                <th>Phương thức TT</th>
                 <th>Tổng tiền</th>
                 <th>Ngày đặt</th>
                 <th>Trạng thái</th>
@@ -53,7 +55,7 @@ if (isset($_POST['delete'])) {
             $i = 0;
             while ($dong = mysqli_fetch_array($row_list)) {
             ?>
-                <tr>
+                <tr  style="background: pink;" align="center">
                     <td><?php echo $i; ?> </td>
                     <td><?php echo $dong['MaHD'] ?></td>
                     <td><?php echo $dong['NguoiNhan'] ?></td>
@@ -82,17 +84,18 @@ if (isset($_POST['delete'])) {
                         </td>
                         <td>
                             <input type="hidden" name="id" value="<?php echo $dong['MaHD'] ?>" />
-                            <button type="submit" name="change">Update</button>
+                            <button type="submit" name="change" class="btn btn-success" style="margin-left: 10px;margin-top: 10px;">Update</button>
                         </td>
 
                     </form>
                     <td>
                         <form method="post" action="index.php?quanly=quanlydonhang" onSubmit="return confirm('Bạn có chắc chắn xoá?')">
                             <input type="hidden" name="id" value="<?php echo $dong['MaHD'] ?>" />
-                            <button type="submit" name="delete" style="">Xoá</button>
+                            <button type="submit" name="delete" class="btn btn-danger" style="margin-left: 10px;margin-top: 10px;">Xoá</button>
                         </form>
                     </td>
                 </tr>
+
             <?php
                 $i++;
             }

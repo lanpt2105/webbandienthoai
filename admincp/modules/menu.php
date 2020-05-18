@@ -14,5 +14,8 @@ if(isset($_GET['ac'])&&$_GET['ac']=='logout')
 			<li><a href="index.php?quanly=quanlytintuc&ac=them">Quản lý tin tức</a></li><hr>
 			<li><a href="index.php?quanly=quanlydonhang">Quản lý đơn hàng</a></li><hr>
 			<li><a href="index.php?quanly=quanlythanhvien&ac=them">Quản lý thành viên</a></li><hr><hr>
-			<li><a href="#">Quản lý giảm giá</a></li><hr>
+			<li><a href="#">Quản lý tích điểm</a></li><hr>
+			<li><a href="#"></a></li><hr>
+			<li><a href="#"></a></li><hr>
+			<li><a href="#"></a></li>
 		</ul></div>

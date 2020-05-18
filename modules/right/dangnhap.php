@@ -10,11 +10,11 @@
 		<center><p style="font-size: 25px; font-weight: bold; padding-bottom: 5px;">Vui lòng điền thông tin đăng nhập dưới đây</p></center>
   <tr>
     <td width="40%" style="font-size: 22px; ">Tên đăng nhập: <strong style="color:red;"> (*)</strong></td>
-    <td width="59%"><input type="text" name="TaiKhoan" size="30" style="height: 25px;" ></td>
+    <td width="59%" style="padding-bottom: 10px;"><input type="text" name="TaiKhoan" size="30" style="height: 25px;" ></td>
   </tr>
 	<tr style="padding-top: 3px;">
     <td style="font-size: 22px; ">Mật khẩu : <strong style="color:red;"> (*)</strong></td>
-   <td width="59%%"><input type="password" name="pass" size="30" style="height: 25px;" ></td>
+   <td width="59%"><input type="password" name="pass" size="30" style="height: 25px;" ></td>
   </tr>
   <tr>
     <td colspan="2">
@@ -45,7 +45,7 @@
 			$_SESSION['dangnhap']=array(
 					'id' => $row_s['MaND'],
 					'ten' => $row_s['Ten'],
-					'ho' => $row_s['Ho'],
+					
 					'gt' => $row_s['GioiTinh'],
 					'sdt' => $row_s['SDT'],
 					'email' => $row_s['Email'],

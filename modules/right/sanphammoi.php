@@ -8,6 +8,7 @@
 
 
 			<div class="sanphamall">
+				<p style="font-size: 28px;font-weight: bold;text-align: center;color:#2292B7;text-shadow: 2px;">Sản phẩm mới của cửa hàng</p>
 				<ul>
 					 <?php
 					
