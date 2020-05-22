@@ -4,6 +4,7 @@ $sql="select * from loaisanpham where MaLSP=$_GET[id]";
 $run=mysqli_query($conn,$sql);
 while($dong=mysqli_fetch_array($run))
 
+
 ?>
 <form action="modules/Quanlyloaisp/Xuly.php" method="post" enctype="multipart/form-data">
 	<table width="500px" border="0 " style="font-size: 20px;margin-top:20px;margin-bottom:10px;margin-left: 200px;background:#A7E98F;">
@@ -30,3 +31,4 @@ while($dong=mysqli_fetch_array($run))
   </tbody>
 </table>
 </form>
+
