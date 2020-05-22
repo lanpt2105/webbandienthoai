@@ -120,7 +120,7 @@
 		{
 			width: 1427px;
 			height:960px;
-			
+			background-image: url("../img/banners/unnamed.jpg");
 			
 			
 		}

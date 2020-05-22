@@ -1,5 +1,5 @@
 <form action="modules/Quanlythanhvien/Xuly.php" method="post" enctype="multipart/form-data">
-	<center><table width="600px" border="0 " style="font-size: 20px;margin-top:20px;margin-bottom:10px;margin-left: 200px;background:#A7E98F;;">
+	<center><table width="600px" border="0 " style="font-size: 20px;margin-top:20px;margin-bottom:10px;margin-left: 200px;background:#A7E98F;">
 
   <tbody>
     <tr >

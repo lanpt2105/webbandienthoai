@@ -84,7 +84,7 @@ if (isset($_POST['delete'])) {
                         </td>
                 <!-- <a style="width: 50px;" href="index.php?quanly=quanlydonhang&ac=detail&id=<?php echo $dong['MaHD'] ?>"> -->
                         <td>
-                        <input type="button" onclick="location.href='index.php?quanly=quanlydonhang&ac=detail&id=<?php echo $dong['MaHD'] ?>';" value="Xem" />
+                        <input type="button" onclick="location.href='index.php?quanly=quanlydonhang&ac=detail&id=<?php echo $dong['MaHD'] ?>';" value="Xem" class="btn btn-info" />
                         </td>
                         <td>
                             <input type="hidden" name="id" value="<?php echo $dong['MaHD'] ?>" />
