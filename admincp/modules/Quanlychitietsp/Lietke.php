@@ -15,8 +15,11 @@
 
 ?>
 
+<div class="tc">
+<div class="lk2">
+	<center><h1> Danh sách sản phẩm</h1></center>
 <input type="button" style="margin-left: 20px;margin-bottom:5px;" class="btn btn-success" onclick="location.href='index.php?quanly=quanlychitietsanpham&ac=them';" value="Thêm" />
-<table width="90%" border="1" style="margin-left: 20px;margin-bottom:5px;" class="table-hover">
+<table width="100%" border="1" style="margin-left: 20px;margin-bottom:5px; background: #C87879;" >
  <tr><th>Mã SP</th>
 	  <th>Mã loại SP</th>
       <th>Tên sản phẩm</th>
@@ -82,8 +85,8 @@
   }
   ?>
 </table>
-	
-<span style="float: left;padding-left: 800px; padding-top: 20px;font-weight: bold;"">
+</div>
+<p style="float: left;padding-left: 800px; padding-top: 20px;font-weight: bold;">
 	Trang :
     <?php
 	$sql1="select * from sanpham";
@@ -98,6 +101,5 @@
 	}
 	}
 	?>
-</span>
-
-
+</p>
+</div>

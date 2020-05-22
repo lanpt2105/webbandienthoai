@@ -1,7 +1,5 @@
-
-	<p style="margin-left: 600px;">
 <form action="modules/Quanlychitietsp/Xuly.php" method="post" enctype="multipart/form-data">
-<table width="500px" border="0" style="margin-left: 500px;margin-top:-1560px; float: right;background:#A7E98F;">
+<table width="500px" border="0" style="margin-left: 20px;margin-bottom:5px; float: right;background:#A7E98F;">
   <tbody>
     <tr>
       <th colspan="2" style="padding-left: 120px;font-weight: bold;font-size: 22px;">Sửa chi tiết sản phẩm</th>
@@ -100,5 +98,4 @@
   </tbody>
 </table>
 </form>
-	</p>
 	

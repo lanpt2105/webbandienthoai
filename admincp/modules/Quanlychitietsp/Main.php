@@ -13,7 +13,7 @@
 	{
 		$tam='';
 	}
-	if($tam == ''){
+	if($tam == '' || $tam == 'lietke'){
 	    include('modules/Quanlychitietsp/Lietke.php');
 	}
 	if($tam=='sua')
