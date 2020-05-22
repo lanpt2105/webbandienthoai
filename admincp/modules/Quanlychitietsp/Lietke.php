@@ -92,7 +92,7 @@
 	$a=ceil($count_trang/5);
 	for($b=1;$b<=$a;$b++){
 		if($trang==$b){
-		echo '<a href="index.php?quanly=quanlychitietsanpham&ac=lietke&trang='.$b.'" style="text-decoration:underline;color:red;">'.$b.' ' .'</a>';
+		echo '<a href="index.php?quanly=quanlychitietsanpham&ac=lietke&trang='.$b.'" style="text-decoration:underline;color:red;">'.$b.''.'</a>';
 	}else{
 		echo '<a href="index.php?quanly=quanlychitietsanpham&ac=lietke&trang='.$b.'" style="text-decoration:none;color:#000;">'.$b.' ' .'</a>';
 	}
