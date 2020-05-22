@@ -45,7 +45,7 @@ if (isset($_POST['delete'])) {
                 <th>Tổng tiền</th>
                 <th>Ngày đặt</th>
                 <th>Trạng thái</th>
-                <th colspan="2">Quản lý</th>
+                <th colspan="3">Quản lý</th>
             </tr>
         </thead>
         <tbody>
@@ -80,9 +80,16 @@ if (isset($_POST['delete'])) {
                                 ?>
                             </select>
                         </td>
+                <!-- <a style="width: 50px;" href="index.php?quanly=quanlydonhang&ac=detail&id=<?php echo $dong['MaHD'] ?>"> -->
+                        <td>
+                        <input type="button" onclick="location.href='index.php?quanly=quanlydonhang&ac=detail&id=<?php echo $dong['MaHD'] ?>';" value="Xem" />
+                        </td>
                         <td>
                             <input type="hidden" name="id" value="<?php echo $dong['MaHD'] ?>" />
-                            <button type="submit" name="change">Update</button>
+                            <?php
+                                if($dong['TrangThai'] != 3)
+                                    echo '<button type="submit" name="change">Update</button>'
+                            ?>
                         </td>
 
                     </form>
