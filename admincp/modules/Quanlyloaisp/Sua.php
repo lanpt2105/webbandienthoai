@@ -2,13 +2,14 @@
 <?php
 $sql="select * from loaisanpham where MaLSP=$_GET[id]";
 $run=mysqli_query($conn,$sql);
-while($dong=mysqli_fetch_array($run))
-
-
 ?>
 <form action="modules/Quanlyloaisp/Xuly.php" method="post" enctype="multipart/form-data">
 	<table width="500px" border="0 " style="font-size: 20px;margin-top:20px;margin-bottom:10px;margin-left: 200px;background:#A7E98F;">
   <tbody>
+    <?php
+
+while($dong=mysqli_fetch_array($run)){
+     ?>
     <tr >
 		<td colspan="2"><div style="padding-left: 100px; font-size: 25px;color: blue; font-weight: bold;">Sửa loại sản phẩm</div></td>
     </tr>
@@ -25,9 +26,12 @@ while($dong=mysqli_fetch_array($run))
       <td><input type="text" name="mota" value="<?php echo $dong['Mota'] ?>"/></td>
     </tr>
     <tr>
-      <td colspan="2"><div align="center"><input type="submit" name="sua" id="sua" value="Sửa"/></div> </td>
+      <td colspan="2">
+        <input type="hidden" name="id" value="<?php echo $dong['MaLSP'] ?>"/>
+        <div align="center"><input type="submit" name="sua" id="sua" value="Sửa"/></div> </td>
       
     </tr>
+  <?php } ?>
   </tbody>
 </table>
 </form>

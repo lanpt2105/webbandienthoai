@@ -1,6 +1,9 @@
 <?php
 	include('../config.php');
-	$id=$_GET['id'];
+	if(isset($_GET['id']))
+		$id=$_GET['id'];
+	else
+		$id = $_POST['id'];
 	$tenloaisp=$_POST['tenloaisp'];
 	$hinhanh=$_POST['hinhanh'];
 	$mota=$_POST['mota'];
@@ -12,9 +15,10 @@ if(isset($_POST['them']))
 }
 elseif(isset($_POST['sua']))
 {
-	$sql="UPDATE loaisanpham set (TenLSP='$tenloaisp',HinhAnh='$hinhanh',Mota='$mota') where MaLSP='$id'";
+	$sql = 'update loaisanpham set TenLSP = \''.$tenloaisp.'\', HinhAnh = \''.$hinhanh.'\', Mota = \''.$mota.'\' where MaLSP = '.$id;
+	// echo $sql;
 	mysqli_query($conn,$sql);
-	header('location:../../index.php?quanly=quanlyloaisanpham&ac=sua&id='.$id);
+	header('location:../../index.php?quanly=quanlyloaisanpham');
 }
 else
 {
