@@ -34,7 +34,7 @@ if (isset($_POST['delete'])) {
 ?>
 <div>
 
-    <table width="100%" border="1" style="margin-left: 100px;margin-bottom:5px;float: left;margin-top: 70px;" class="table-hover">
+    <table width="100%" border="1" style="margin-bottom:5px;float: left;margin-top: 70px;" class="table-hover">
         <caption style="font-size: 30px;font-weight: bold;color: green;padding-left: 300px; padding-bottom: 30px;">Quản lý thông tin đơn hàng</caption>
         <thead>
             <tr style="background: purple;font-size: 18px; font-weight: bold;color: white;" align="center">

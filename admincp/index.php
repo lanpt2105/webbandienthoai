@@ -35,11 +35,9 @@
 	
 	.content
 	{
-		width: auto;
+		width: 100% - 250px;
 	    height: auto;
-	    
 		float: left;
-		
 		}
 	
 	.footer
@@ -162,9 +160,12 @@
 		<?php
 		   
 			include('modules/config.php');
-		 	include('modules/heading.php');
+			 include('modules/heading.php');
+			echo '<div style="display: flex; 
+			flex-direction: \'row\';">';
 			include('modules/menu.php');
 			include('modules/content.php');
+			echo '</div>';
 			include('modules/footer.php');
 		?>
 		

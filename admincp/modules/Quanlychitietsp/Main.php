@@ -1,7 +1,7 @@
 <div class="left">
-	<?php
+	<!-- <?php
 	    include('modules/Quanlychitietsp/Lietke.php');
-	?>
+	?> -->
 </div><br>
 <div class="right">
 <?php
@@ -13,7 +13,9 @@
 	{
 		$tam='';
 	}
-	
+	if($tam == ''){
+	    include('modules/Quanlychitietsp/Lietke.php');
+	}
 	if($tam=='sua')
 	{
 		include('modules/Quanlychitietsp/Sua.php');

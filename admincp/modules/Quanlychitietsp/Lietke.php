@@ -15,8 +15,8 @@
 
 ?>
 
-<div class="lietke">
-<table width="60%" border="1" class="table-hover">
+<input type="button" style="margin-left: 20px;margin-bottom:5px;" class="btn btn-success" onclick="location.href='index.php?quanly=quanlychitietsanpham&ac=them';" value="Thêm" />
+<table width="90%" border="1" style="margin-left: 20px;margin-bottom:5px;" class="table-hover">
  <tr><th>Mã SP</th>
 	  <th>Mã loại SP</th>
       <th>Tên sản phẩm</th>
@@ -65,14 +65,16 @@
       <td><?php echo $dong['SoDanhGia'] ?></td>
       <td><?php echo $dong['TrangThai'] ?></td>
      
-    <td width="50"><a href="index.php?quanly=quanlychitietsanpham&ac=sua&id=<?php echo $dong['MaSP'] ?>" >Sửa</a></td>
+    <td >
+      <input type="button" class="btn btn-primary" onclick="location.href='index.php?quanly=quanlychitietsanpham&ac=sua&id=<?php echo $dong['MaSP'] ?>';" value="Sửa" />
+    </td>
     <td>
                         <form method="post" action="index.php?quanly=quanlydonhang" onSubmit="return confirm('Bạn có chắc chắn xoá?')">
                             <input type="hidden" name="id" value="<?php echo $dong['MaHD'] ?>" />
                             <button type="submit" name="delete" class="btn btn-danger" style="margin-left: 10px;margin-top: 10px;">Xoá</button>
                         </form>
                     </td>
-     <td width="50"><a href="index.php?quanly=quanlychitietsanpham&ac=them" >Thêm</a></td>
+
 
   </tr>
   <?php
@@ -97,6 +99,5 @@
 	}
 	?>
 </span>
-</div>
 
 
