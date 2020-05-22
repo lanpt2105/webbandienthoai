@@ -8,10 +8,11 @@
     // echo '========='.$test;
 ?>
 <div class="">
-    <table width="80%" border="1" style="margin-left: 20px;margin-bottom:5px;float: left;" class="table-hover">
-        <caption>Thông tin chi tiết đơn hàng</caption>
+     <p style="font-weight: bold;font-size: 25px;color: blue;margin-left: 450px;">Thông tin chi tiết đơn hàng</p>
+    <table width="100%" border="1" style="border-collapse:collapse; margin:5px; text-align:center;margin-left: 300px;" class="table-hover">
+       
         <thead>
-            <tr>
+            <tr style="background:purple; height:50px; border-radius:5px;color:white;">
                 <th>STT</th>
                 <th>Mã SP</th>
                 <th>Tên sản phẩm</th>
@@ -29,7 +30,7 @@
                     else
                         $image = '../'.$dong['HinhAnh'];
             ?>
-                <tr>
+                <tr style="font-size: 18px;background: #DBB4B5; ">
                     <td><?php echo $i; ?></td>
                     <td><?php echo $dong['MaSP']?></td>
                     <td><?php echo $dong['TenSP']?></td>
@@ -44,5 +45,5 @@
             ?>
         </tbody>
     </table>
-    <input type="button" onclick="location.href='index.php?quanly=quanlydonhang';" value="Quay lại" />
+    <input type="button" onclick="location.href='index.php?quanly=quanlydonhang';" value="Quay lại" class="btn btn-danger" style="margin-left: 320px;margin-top: 10px;" />
 </div>
