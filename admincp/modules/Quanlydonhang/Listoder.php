@@ -88,16 +88,11 @@ if (isset($_POST['delete'])) {
                         </td>
                         <td>
                             <input type="hidden" name="id" value="<?php echo $dong['MaHD'] ?>" />
-<<<<<<< HEAD
-                            <button type="submit" name="change" class="btn btn-success" style="margin-left: 10px;margin-top: 10px;">Update</button>
-=======
                             <?php
                                 if($dong['TrangThai'] != 3)
-                                    echo '<button type="submit" name="change">Update</button>'
+                                    echo '<button type="submit" name="change" class="btn btn-success" style="margin-left: 10px;margin-top: 10px;">Update</button>'
                             ?>
->>>>>>> 4b4b5ea7a75cf53c227e74532f32f755c10a4845
                         </td>
-
                     </form>
                     <td>
                         <form method="post" action="index.php?quanly=quanlydonhang" onSubmit="return confirm('Bạn có chắc chắn xoá?')">
