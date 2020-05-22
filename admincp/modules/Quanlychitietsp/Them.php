@@ -1,7 +1,7 @@
 <div class="add">
 	<p >
 <form action="modules/Quanlychitietsp/Xuly.php" method="post" enctype="multipart/form-data" >
-<table width="500px" border="0" style="margin-left: 500px;margin-top:-1570px; float: right;background:#A7E98F;">
+<table width="500px" border="0" style="font-size: 20px;margin-top:20px;margin-bottom:10px;margin-left: 200px;background:#A7E98F;">
   <tbody>
     <tr>
       <th colspan="2" style="padding-left: 120px;font-weight: bold;font-size: 22px;">Thêm chi tiết sản phẩm</th>

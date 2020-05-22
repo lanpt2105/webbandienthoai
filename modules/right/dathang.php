@@ -48,7 +48,7 @@ if (isset($_SESSION['cart'])) {
 		<p style="font-size: 25px; font-weight:bold;">Danh sách sản phẩm của bạn: </p>
 		';
 	} else {
-		echo '<div class="tieude">Giỏ hàng của bạn</div>';
+		echo '<p style="font-size: 25px; font-weight:bold;padding-top: 10px;">Sản phẩm có trong giỏ hàng:</p>';
 	}
 
 	echo '<div class="box_giohang">';
@@ -162,7 +162,8 @@ if (isset($_SESSION['cart'])) {
 		<?php
 		if (!isset($_SESSION['dangnhap'])) {
 			echo '
-		<p style="font-size:25px;">Bạn chưa đăng nhập.Vui lòng đăng nhập để đặt hàng.<br> <a href="index.php?xem=dangkymoi">Đăng ký mới?</a> hoặc <a href="index.php?xem=dangnhap">Đăng nhập</a></p>';
+		<p style="font-size:25px;">Bạn chưa đăng nhập.Bạn có muốn đăng nhập hoặc đăng ký tài khoản để có thêm nhiều ưu đãi không?<br> <a href="index.php?xem=dangkymoi">Đăng ký mới?</a> hoặc <a href="index.php?xem=dangnhap">Đăng nhập</a></p>';
+		
 		}
 		?>
 		<?php

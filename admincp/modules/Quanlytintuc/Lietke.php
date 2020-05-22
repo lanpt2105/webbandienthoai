@@ -17,15 +17,15 @@
 <div class="tc">
 <div class="lk2">
 	<center><h1> Liệt kê tin tức</h1></center>
-<table width="100%" border="1" style="margin-left: 20px;margin-bottom:5px; background: #C87879;" class="table-hover">
+<table width="100%" border="1" style="margin-left: 20px;margin-bottom:5px; background: #C87879;" >
   <tbody>
     <tr>
 	<th>Mã TT</th>
       <th>Mã loại TT</th>
-      <th>Tên TT</th>
-      <th>Mô tả</th>
-	  <th >Nội dung</th>
-	  <th>Hình ảnh</th>
+      <th class="col-sm-2">Tên TT</th>
+      <th class="col-sm-2">Mô tả</th>
+	  <th class="col-sm-5">Nội dung</th>
+	  <th class="col-sm-1">Hình ảnh</th>
 	  <th>Tin hot</th>
 	  <th>Ngày</th>
       <th colspan="2">Quản lý</th>
@@ -58,7 +58,7 @@
 </table>
 	</div> 
 <p style="width: 600px;float: left;padding-left: 800px; padding-top: 20px;font-weight: bold;"">
-	Trang :
+	Trang:
     <?php
 	$sql1="select * from tintuc";
 	$sql_trang=mysqli_query($conn,$sql1);
@@ -66,13 +66,13 @@
 	$a=ceil($count_trang/2);
 	for($b=1;$b<=$a;$b++){
 		if($trang==$b){
-		echo '<a href="index.php?quanly=quanlytintuc&ac=lietke&trang='.$b.'" style="text-decoration:underline;color:red;">'.$b.''.'</a>';
+		echo '<a href="index.php?quanly=quanlytintuc&ac=lietke&trang='.$b.'" style="text-decoration:underline;color:red;">'.$b.' ' .'</a>';
 	}else{
 		echo '<a href="index.php?quanly=quanlytintuc&ac=lietke&trang='.$b.'" style="text-decoration:none;color:#000;">'.$b.' ' .'</a>';
 	}
 	}
 	?>
 </p>
-																							  </div>
+ </div>
 											
 																							  

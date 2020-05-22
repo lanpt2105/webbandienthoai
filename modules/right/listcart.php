@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
 			while($data = mysqli_fetch_array($res)){
 				if($key == $data['MaSP'] && $val > $data['SoLuong']){
 					$check[$key] = false;
-					echo 'Sản phẩm '.$data['TenSP'].' trong kho hàng không đủ.<br/>';
+					echo '<p style="font-size:25px; color:red;font-weight:bold;">Sản phẩm '.$data['TenSP'].' trong kho hàng không đủ.</p><br/>';
 				}
 				else{
 					$check[$key] = true;

@@ -66,7 +66,14 @@
       <td><?php echo $dong['TrangThai'] ?></td>
      
     <td width="50"><a href="index.php?quanly=quanlychitietsanpham&ac=sua&id=<?php echo $dong['MaSP'] ?>" >Sửa</a></td>
-    <td><a href="modules/Quanlychitietsp/Xuly.php?id=<?php echo $dong['MaSP']?>" class="delete_link">Xóa</a></td>
+    <td>
+                        <form method="post" action="index.php?quanly=quanlydonhang" onSubmit="return confirm('Bạn có chắc chắn xoá?')">
+                            <input type="hidden" name="id" value="<?php echo $dong['MaHD'] ?>" />
+                            <button type="submit" name="delete" class="btn btn-danger" style="margin-left: 10px;margin-top: 10px;">Xoá</button>
+                        </form>
+                    </td>
+     <td width="50"><a href="index.php?quanly=quanlychitietsanpham&ac=them" >Thêm</a></td>
+
   </tr>
   <?php
   $i++;
@@ -83,7 +90,7 @@
 	$a=ceil($count_trang/5);
 	for($b=1;$b<=$a;$b++){
 		if($trang==$b){
-		echo '<a href="index.php?quanly=quanlychitietsanpham&ac=lietke&trang='.$b.'" style="text-decoration:underline;color:red;">'.$b.''.'</a>';
+		echo '<a href="index.php?quanly=quanlychitietsanpham&ac=lietke&trang='.$b.'" style="text-decoration:underline;color:red;">'.$b.' ' .'</a>';
 	}else{
 		echo '<a href="index.php?quanly=quanlychitietsanpham&ac=lietke&trang='.$b.'" style="text-decoration:none;color:#000;">'.$b.' ' .'</a>';
 	}
@@ -91,4 +98,5 @@
 	?>
 </span>
 </div>
+
 

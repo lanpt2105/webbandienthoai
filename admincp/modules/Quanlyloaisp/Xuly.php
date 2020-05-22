@@ -1,6 +1,6 @@
 <?php
 	include('../config.php');
-	$id=$_GET['MaLSP'];
+	$id=$_GET['id'];
 	$tenloaisp=$_POST['tenloaisp'];
 	$hinhanh=$_POST['hinhanh'];
 	$mota=$_POST['mota'];

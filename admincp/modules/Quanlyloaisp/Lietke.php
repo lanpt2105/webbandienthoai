@@ -1,5 +1,5 @@
 <?php
-	$sql="select * from loaisanpham order by MaLSP desc";
+	$sql="select * from loaisanpham order by MaLSP asc";
 	$run=mysqli_query($conn,$sql);
 ?>
 <table width="90%" border="1" style="margin-left: 20px;margin-bottom:5px;" class="table-hover">

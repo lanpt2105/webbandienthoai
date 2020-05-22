@@ -6,21 +6,21 @@ while($dong=mysqli_fetch_array($run))
 
 ?>
 <form action="modules/Quanlyloaisp/Xuly.php" method="post" enctype="multipart/form-data">
-	<table width="500px" border="0 " style="font-size: 20px;margin-top:20px;margin-left: 20px;">
+	<table width="500px" border="0 " style="font-size: 20px;margin-top:20px;margin-bottom:10px;margin-left: 200px;background:#A7E98F;">
   <tbody>
     <tr >
-		<td colspan="2"><div style="padding-left: 100px;">Sửa loại sản phẩm</div></td>
+		<td colspan="2"><div style="padding-left: 100px; font-size: 25px;color: blue; font-weight: bold;">Sửa loại sản phẩm</div></td>
     </tr>
     <tr>
-      <td>Tên loại sản phẩm:</td>
+      <td style="padding-left: 20px;font-weight: bold;">Tên loại sản phẩm:</td>
       <td><input type="text" name="tenloaisp" value="<?php echo $dong['TenLSP'] ?>"/></td>
     </tr>
     <tr>
-      <td>Hình ảnh:</td>
+      <td style="padding-left: 20px;font-weight: bold;">Hình ảnh:</td>
       <td><input type="text" name="hinhanh" value="<?php echo $dong['HinhAnh'] ?>"/></td>
     </tr>
     <tr>
-      <td>Mô tả:</td>
+      <td style="padding-left: 20px;font-weight: bold;">Mô tả:</td>
       <td><input type="text" name="mota" value="<?php echo $dong['Mota'] ?>"/></td>
     </tr>
     <tr>

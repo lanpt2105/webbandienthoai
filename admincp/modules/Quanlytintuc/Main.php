@@ -1,4 +1,8 @@
-<div class="left">
+<div ><div class="left">
+	
+</div><br>
+<div class="right">
+	
 	<?php
 	if(isset($_GET['ac']))
 	{
@@ -17,9 +21,8 @@
 		include('modules/Quanlytintuc/Sua.php');
 	}
 	?>
-</div><br>
-<div class="right">
 	<?php
 	    include('modules/Quanlytintuc/Lietke.php');
 	?>
+</div>
 </div>

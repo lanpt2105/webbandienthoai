@@ -2,9 +2,9 @@
 	$sql="select * from user order by MaND asc";
 	$run=mysqli_query($conn,$sql);
 ?>
-<table width="90%" border="1" style="margin-left: 20px;margin-bottom:5px;" class="table-hover">
+<table width="90%" border="1" style="margin-left: 20px;margin-bottom:5px; class="table-hover">
   <tbody>
-    <tr>
+    <tr style="background: purple; font-weight: bold;color: white;" align="center">
       <th>STT</th>
       <th>Mã user</th>
       <th >Tên tài khoản</th>
@@ -23,7 +23,7 @@
 	  while ( $dong=mysqli_fetch_array($run))
 	  {
 	  ?>
-    <tr>
+    <tr style="background: pink;" align="center">
       <td align="center"><?php echo $i; ?> </td>
       <td><?php echo $dong['MaND'] ?></td>
       <td align="center"><?php echo $dong['TaiKhoan'] ?></td>
