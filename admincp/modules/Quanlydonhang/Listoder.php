@@ -62,7 +62,7 @@ if (isset($_POST['delete'])) {
                     <td><?php echo $dong['SDT'] ?></td>
                     <td><?php echo $dong['DiaChi'] ?></td>
                     <td><?php echo $dong['PhuongThucTT'] ?></td>
-                    <td><?php echo $dong['TongTien'] ?></td>
+                    <td><?php echo number_format($dong['TongTien'], 0, '', ',').' VND' ?></td>
                     <td><?php echo $dong['NgayLap'] ?></td>
                     <form method="post" action="index.php?quanly=quanlydonhang">
                         <td>

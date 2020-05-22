@@ -1,6 +1,6 @@
 <?php
     if(isset($_GET['id'])){
-        $sql = 'SELECT * FROM chitiethoadon LEFT JOIN sanpham on chitiethoadon.MaSP = sanpham.MaSP WHERE MaHD = '.$_GET['id'];
+        $sql = 'SELECT a.MaSP, b.TenSP, b.HinhAnh, a.SoLuong, b.DonGia FROM chitiethoadon a LEFT JOIN sanpham b on a.MaSP = b.MaSP WHERE MaHD = '.$_GET['id'];
         $row_list = mysqli_query($conn, $sql);
         // print_r(mysqli_fetch_array($row_list));
     }
@@ -17,7 +17,9 @@
                 <th>Mã SP</th>
                 <th>Tên sản phẩm</th>
                 <th>Hình ảnh</th>
+                <th>Số lượng</th>
                 <th>Đơn giá</th>
+                <th>Thành tiền</th>
             </tr>
         </thead>
         <tbody>
@@ -37,7 +39,9 @@
                     <td>
                         <img src="<?php echo $image ?>" alt="<?php echo $dong['TenSP']?>" width="100p">
                     </td>
-                    <td><?php echo $dong['DonGia']?></td>
+                    <td><?php echo number_format($dong['SoLuong'], 0, '', ',')?></td>
+                    <td><?php echo number_format($dong['DonGia'], 0, '', ',').' VND'?></td>
+                    <td><?php echo number_format($dong['SoLuong']*$dong['DonGia'], 0, '', ',').' VND'?></td>
                 </tr>
             <?php
               $i++;
