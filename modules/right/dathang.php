@@ -12,9 +12,16 @@ if (session_id() === '') {
 	session_start();
 }
 if (isset($_POST['submit'])) {
-	$sql = 'INSERT INTO hoadon(MaND, NgayLap, NguoiNhan, SDT, DiaChi, PhuongThucTT, TongTien)
-	VALUES ('.$_SESSION['dangnhap']['id'].',\''.date("Y-m-d").'\',\''.$_POST['receiver'].'\',\''.$_POST['phone'].'\',\''.$_POST['address'].'\',\''.$_POST['type_payment'].'\','.$_POST['tongtien'].')';
 	
+	$sql = 'INSERT INTO hoadon(MaND, NgayLap, NguoiNhan, SDT, DiaChi, PhuongThucTT, TongTien)
+	VALUES (';
+	if(isset($_SESSION['dangnhap']))
+		$sql = 'INSERT INTO hoadon(MaND, NgayLap, NguoiNhan, SDT, DiaChi, PhuongThucTT, TongTien)
+		VALUES ('.$_SESSION['dangnhap']['id'].',\''.date("Y-m-d").'\',\''.$_POST['receiver'].'\',\''.$_POST['phone'].'\',\''.$_POST['address'].'\',\''.$_POST['type_payment'].'\','.$_POST['tongtien'].')';
+	else
+		$sql = 'INSERT INTO hoadon(NgayLap, NguoiNhan, SDT, DiaChi, PhuongThucTT, TongTien)
+		VALUES (\''.date("Y-m-d").'\',\''.$_POST['receiver'].'\',\''.$_POST['phone'].'\',\''.$_POST['address'].'\',\''.$_POST['type_payment'].'\','.$_POST['tongtien'].')';
+
 	// echo '<br/>'.$sql.'<br/>';
 	$query = mysqli_query($conn,$sql); //insert vào bảng hoadon
 	if($query === TRUE){ //neu insert thanh cong
@@ -159,15 +166,15 @@ if (isset($_SESSION['cart'])) {
 	</table>
 	<ul class="control">
 		
-		<?php
+		<!-- <?php
 		if (!isset($_SESSION['dangnhap'])) {
 			echo '
 		<p style="font-size:25px;">Bạn chưa đăng nhập.Bạn có muốn đăng nhập hoặc đăng ký tài khoản để có thêm nhiều ưu đãi không?<br> <a href="index.php?xem=dangkymoi">Đăng ký mới?</a> hoặc <a href="index.php?xem=dangnhap">Đăng nhập</a></p>';
 		
 		}
-		?>
+		?> -->
 		<?php
-		if (isset($_SESSION['dangnhap']) && isset($_SESSION['cart']) && $_SESSION['cart'] != null) {
+		if (isset($_SESSION['cart']) && $_SESSION['cart'] != null) {
 		?>
 
 			<span style="padding-left: 120px;margin: 20px;"><button type="submit" name="submit" style="padding: 10px; background-color:greenyellow; border-radius:10px;align-content: center;">Đặt hàng</button></span>
