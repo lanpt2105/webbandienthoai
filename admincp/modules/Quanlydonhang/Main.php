@@ -15,6 +15,12 @@
 </div><br/>
 <div class="right">
         <?php
-            include('modules/Quanlydonhang/Listoder.php');
+            if($tam == '' || $tam == 'list'){
+                include('modules/Quanlydonhang/Listoder.php');
+            }
+            if($tam=='detail')
+            {
+                include('modules/Quanlydonhang/Detail.php');
+            }
         ?>
 </div>
